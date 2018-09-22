@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-bootstrap",
-  "description": "Simple starter for Gatsby",
+  "name": "chez-nicole-web",
+  "description": "Website for Chez Nicole",
   "version": "2.0.0",
-  "author": "Futoshi Iwashita <jaxx2104@gmail.com>",
+  "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.0-beta.1",
     "gatsby-image": "^2.0.0-beta.1",
