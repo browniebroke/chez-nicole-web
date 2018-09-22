@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatstrap',
-    description: 'Gatsby starter for bootstrap a blog',
-    siteUrl: 'https://gatstrap.netlify.com',
-    author: 'jaxx2104',
-    twitter: 'jaxx2104',
+    title: 'Chez Nicole',
+    description: 'Site pour du restaurant Chez Nicole de Sauclières',
+    siteUrl: 'https://www.chez-nicole.fr',
+    author: 'browniebroke',
+    twitter: '',
     adsense: '',
   },
   pathPrefix: '/',
@@ -12,15 +12,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/posts/`,
-        name: 'posts',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/content/images/`,
-        name: 'images',
+        path: `${__dirname}/content/gallery/`,
+        name: 'gallery',
       },
     },
     {
@@ -50,26 +43,26 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Gatstrap',
-        short_name: 'Gatstrap',
-        description: 'Gatsby starter for bootstrap a blog',
-        homepage_url: 'https://gatstrap.netlify.com',
+        name: 'Chez Nicole',
+        short_name: 'Chez Nicole',
+        description: 'Site du restaurant Chez Nicole',
+        homepage_url: 'https://www.chez-nicole.fr',
         start_url: '/',
         background_color: '#fff',
-        theme_color: '#673ab7',
+        theme_color: '#b2d233',
         display: 'standalone',
-        icons: [
-          {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        // icons: [
+        //   {
+        //     src: '/img/android-chrome-192x192.png',
+        //     sizes: '192x192',
+        //     type: 'image/png',
+        //   },
+        //   {
+        //     src: '/img/android-chrome-512x512.png',
+        //     sizes: '512x512',
+        //     type: 'image/png',
+        //   },
+        // ],
       },
     },
     {

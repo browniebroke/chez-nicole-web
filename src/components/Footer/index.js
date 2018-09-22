@@ -3,16 +3,21 @@ import React from 'react'
 import './style.scss'
 
 const Footer = ({ author, title }) => (
-  <div className="footer">
+  <div className="footer py-5 small">
     <div className="container">
       <hr className="border-primary" />
-      <p>
-        {title}
-        <Link to="/profile/">
-          <br />
-          <strong>{author}</strong> on Profile
-        </Link>
-      </p>
+      <div className="text-center">
+        <ul className="list-inline">
+          <li className="list-inline-item">
+            Création : <a href="mailto:alla.brunoo@gmail.com">NoLa Design</a>
+          </li>
+          <li className="list-inline-item">-</li>
+          <li className="list-inline-item">
+            Logo :{' '}
+            <a href="mailto:contact@exodecreation12.fr"> Exode Création</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 )

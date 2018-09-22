@@ -10,8 +10,8 @@
 
 // Reassign color vars to semantic color scheme
 $theme-colors: (
-  primary: $purple,
-  secondary: $gray-600,
+  primary: $dark-brown,
+  secondary: $green,
   success: $green,
   info: $cyan,
   warning: $yellow,
@@ -35,21 +35,22 @@ $enable-print-styles: true !default;
 //
 // Define the maximum width of `.container` for different screen sizes.
 
-$container-max-widths: (
-  sm: 540px,
-  md: 640px,
-  lg: 710px,
-  xl: 780px,
-) !default;
+//$container-max-widths: (
+//  sm: 540px,
+//  md: 640px,
+//  lg: 710px,
+//  xl: 780px,
+//) !default;
 
 // Body
 //
 // Settings for the `<body>` element.
 
-$body-bg: $white !default;
+$body-bg: $brown !default;
 $body-color: $gray-700 !default;
 $inverse-bg: $gray-900 !default;
 $inverse-color: $gray-600 !default;
+$thumbnail-bg: $white;
 
 // Links
 //
@@ -74,17 +75,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
+//p {
+//  font-size: 16px;
+//  line-height: 1.5;
+//  margin-bottom: 20px;
+//}
+//
+//img {
+//  margin-bottom: 15px;
+//  max-width: 100%;
+//}
+//
+//img:hover {
+//  animation: pulse 0.5s;
+//}
 
-img {
-  margin-bottom: 15px;
-  max-width: 100%;
-}
-
-img:hover {
-  animation: pulse 0.5s;
+.main-container {
+  background-color: $green;
 }
