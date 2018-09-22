@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
 const Meta = ({ site, title }) => {
-  const siteTitle = get(site, 'title')
+  const siteTitle = 'Chez Nicole'
   title = title ? `${title} | ${siteTitle}` : siteTitle
   return (
     <Helmet

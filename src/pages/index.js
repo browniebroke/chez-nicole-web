@@ -7,7 +7,7 @@ import Layout from 'components/Layout'
 const SiteIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
+      <Meta site={get(data, 'site.meta')} title="Acceuil" />
       <div className="container-fluid">
         <div className="my-4">
           <div className="row">

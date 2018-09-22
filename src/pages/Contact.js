@@ -6,7 +6,7 @@ import get from 'lodash/get'
 const Restaurant = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} />
+      <Meta site={get(data, 'site.meta')} title="Contact" />
       <div className="container-fluid">
         <div className="my-4">
           <div className="row">
