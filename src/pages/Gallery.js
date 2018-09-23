@@ -29,6 +29,7 @@ class Gallery extends Component {
     this.renderLightBox = this.renderLightBox.bind(this)
     this.openLightBox = this.openLightBox.bind(this)
     this.closeLightbox = this.closeLightbox.bind(this)
+    this.moveToIndex = this.moveToIndex.bind(this)
     this.movePrev = this.movePrev.bind(this)
     this.moveNext = this.moveNext.bind(this)
   }
@@ -62,15 +63,19 @@ class Gallery extends Component {
   closeLightbox() {
     this.setState({ isOpen: false })
   }
-  movePrev() {
+
+  moveToIndex(index) {
     this.setState({
-      index: (this.state.index - 1) % this.state.images.length,
+      index,
     })
   }
+
+  movePrev() {
+    this.moveToIndex((this.state.index - 1) % this.state.images.length)
+  }
+
   moveNext() {
-    this.setState({
-      index: (this.state.index + 1) % this.state.images.length,
-    })
+    this.moveToIndex((this.state.index + 1) % this.state.images.length)
   }
 
   render() {
