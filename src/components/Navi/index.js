@@ -9,7 +9,7 @@ class Navi extends React.Component {
       <React.Fragment>
         <div className="row mx-1">
           <Link to="/" className="navbar-brand">
-            <img src="/img/logo.png" alt="Chez Nicole" className="img-fluid" />
+            <img src="/img/logo.png" alt={title} className="img-fluid" />
           </Link>
         </div>
         <div className="m-b-1">
