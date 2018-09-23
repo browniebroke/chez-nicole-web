@@ -83,7 +83,11 @@ class Gallery extends Component {
 
     return (
       <Layout location={location}>
-        <Meta site={get(data, 'site.meta')} title="Gallerie" />
+        <Meta
+          site={get(data, 'site.meta')}
+          title="Gallerie"
+          location={location}
+        />
         <div className="container-fluid">
           <div className="my-4">
             <div className="row">
@@ -125,6 +129,15 @@ export default Gallery
 
 export const pageQuery = graphql`
   query ImagesForGallery {
+    site {
+      meta: siteMetadata {
+        title
+        description
+        siteUrl
+        author
+        image
+      }
+    }
     allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
       edges {
         node {
