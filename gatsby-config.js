@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Chez Nicole',
-    description: 'Site pour du restaurant Chez Nicole de Sauclières',
-    siteUrl: 'https://www.chez-nicole.fr',
+    description:
+      "Chez Nicole est un restaurant familial situé à Sauclières, dans l'Aveyron",
+    siteUrl: 'http://www.chez-nicole.fr',
     author: 'browniebroke',
-    twitter: '',
-    adsense: '',
+    image: '/img/content/bar-original.jpg',
   },
   pathPrefix: '/',
   plugins: [

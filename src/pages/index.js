@@ -1,3 +1,4 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
 
@@ -7,7 +8,7 @@ import Layout from 'components/Layout'
 const SiteIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} title="Acceuil" />
+      <Meta site={get(data, 'site.meta')} title="Acceuil" location={location} />
       <div className="container-fluid">
         <div className="my-4">
           <div className="row">
@@ -41,3 +42,17 @@ const SiteIndex = ({ data, location }) => {
 }
 
 export default SiteIndex
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      meta: siteMetadata {
+        title
+        description
+        siteUrl
+        author
+        image
+      }
+    }
+  }
+`

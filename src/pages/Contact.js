@@ -1,12 +1,13 @@
+import { graphql } from 'gatsby'
 import React from 'react'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 import get from 'lodash/get'
 
-const Restaurant = ({ data, location }) => {
+const Contact = ({ data, location }) => {
   return (
     <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} title="Contact" />
+      <Meta site={get(data, 'site.meta')} title="Contact" location={location} />
       <div className="container-fluid">
         <div className="my-4">
           <div className="row">
@@ -44,4 +45,18 @@ const Restaurant = ({ data, location }) => {
   )
 }
 
-export default Restaurant
+export default Contact
+
+export const pageQuery = graphql`
+  query {
+    site {
+      meta: siteMetadata {
+        title
+        description
+        siteUrl
+        author
+        image
+      }
+    }
+  }
+`
