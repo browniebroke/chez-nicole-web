@@ -3006,6 +3006,11 @@ chownr@^1.0.1:
   resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.0.1.tgz#e2a75042a9551908bebd25b8523d5f9769d79181"
   integrity sha1-4qdQQqlVGQi+vSW4Uj1fl2nXkYE=
 
+chownr@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/chownr/-/chownr-1.1.1.tgz#54726b8b8fff4df053c42187e801fb4412df1494"
+  integrity sha512-j38EvO5+LHX84jlo6h4UzmOwi0UgW61WRyPtJz4qaadK5eY3BTS5TY/S1Stc3Uk2lIM6TPevAlULiEJwie860g==
+
 chrome-trace-event@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/chrome-trace-event/-/chrome-trace-event-1.0.0.tgz#45a91bd2c20c9411f0963b5aaeb9a1b95e09cc48"
@@ -5994,23 +5999,24 @@ gatsby-plugin-react-next@^2.0.1-13:
     core-js "^2.5.1"
     resolve "^1.5.0"
 
-gatsby-plugin-sass@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.2.tgz#263d364967b42875e865dca645eb7bbdcc88d0e4"
-  integrity sha512-FcYajvwbz3+PRzwnTD2onEbR9hLsgZJplYO8kSjZI7I9fkdcJRR8oj+7yn/6Ico7/ZuyIMbhYlAUv5pEXK701w==
+gatsby-plugin-sass@2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.3.tgz#a965998abcfaa40d8b97e2b82fc27d6e6cd762c0"
+  integrity sha512-N2mZf9BUEYTxAlG6tfb/iFL4mnNlLo5Rx11AKFDN0FrAMah/zYh8nJl7AsYC3ALcKrYCjE1rmopuMFbjmjQaDA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-sharp@2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.7.tgz#ee24e5ffdd52958deae84a18732dc3c36fddec27"
-  integrity sha512-jXgRtGSb9Bc6D6nKlLaT7NhuhsQ1HIix/7NYs0LV3oTViGNXs7VEUne4+LlBPDuhqCkmb/N31YwToER1MZxx0g==
+gatsby-plugin-sharp@2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sharp/-/gatsby-plugin-sharp-2.0.12.tgz#c791b29f153e481b8287605bf171331daaba7cb8"
+  integrity sha512-E3LmPQVY7n27oiWJRvw+C1V9ijR9V3Y2xBl9dFL3NoueLyZmlk0hFRG8gTpCr9e3va04b+tV33mATetcy7mLHw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     async "^2.1.2"
     bluebird "^3.5.0"
     fs-exists-cached "^1.0.0"
+    fs-extra "^7.0.0"
     imagemin "^6.0.0"
     imagemin-mozjpeg "^7.0.0"
     imagemin-pngquant "^6.0.0"
@@ -6020,7 +6026,7 @@ gatsby-plugin-sharp@2.0.7:
     potrace "^2.1.1"
     probe-image-size "^4.0.0"
     progress "^1.1.8"
-    sharp "^0.20.2"
+    sharp "^0.21.0"
     svgo "^0.7.2"
 
 gatsby-plugin-sitemap@^2.0.0-beta.1:
@@ -9311,10 +9317,25 @@ minipass@^2.2.1, minipass@^2.3.3:
     safe-buffer "^5.1.2"
     yallist "^3.0.0"
 
+minipass@^2.3.4:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-2.3.5.tgz#cacebe492022497f656b0f0f51e2682a9ed2d848"
+  integrity sha512-Gi1W4k059gyRbyVUZQ4mEqLm0YIUiGYfvxhF6SIlk3ui1WVxMTGfGdQ2SInh3PDrRTVvPKgULkpJtT4RH10+VA==
+  dependencies:
+    safe-buffer "^5.1.2"
+    yallist "^3.0.0"
+
 minizlib@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.1.0.tgz#11e13658ce46bc3a70a267aac58359d1e0c29ceb"
   integrity sha512-4T6Ur/GctZ27nHfpt9THOdRZNgyJ9FZchYO1ceg5S8Q3DNLCKYy44nCZzgCJgcvx2UM8czmqak5BCxJMrq37lA==
+  dependencies:
+    minipass "^2.2.1"
+
+minizlib@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.1.1.tgz#6734acc045a46e61d596a43bb9d9cd326e19cc42"
+  integrity sha512-TrfjCjk4jLhcJyGMYymBH6oTXcWjYbUAXTHDbtnWHjZC25h0cdajHuPE1zxb4DVmu8crfh+HwH/WMuyLG0nHBg==
   dependencies:
     minipass "^2.2.1"
 
@@ -9438,6 +9459,11 @@ nan@^2.10.0, nan@^2.9.2:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.10.0.tgz#96d0cd610ebd58d4b4de9cc0c6828cda99c7548f"
   integrity sha512-bAdJv7fBLhWC+/Bls0Oza+mvTaNQtP+1RyhhhvD95pgUJz6XM5IzgmxOkItJ9tkoCiplvAnXI1tNmmUD/eScyA==
 
+nan@^2.11.1:
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
+  integrity sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA==
+
 nanoid@^1.0.7:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-1.1.0.tgz#b18e806e1cdbfdbe030374d5cf08a48cbc80b474"
@@ -9459,6 +9485,11 @@ nanomatch@^1.2.9:
     regex-not "^1.0.0"
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
+
+napi-build-utils@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/napi-build-utils/-/napi-build-utils-1.0.1.tgz#1381a0f92c39d66bf19852e7873432fc2123e508"
+  integrity sha512-boQj1WFgQH3v4clhu3mTNfP+vOBxorDlE8EKiMjUlLG3C4qAESnn9AxIOkFgTR2c9LtzNjPrjS60cT27ZKBhaA==
 
 natural-compare@^1.4.0:
   version "1.4.0"
@@ -10857,6 +10888,28 @@ prebuild-install@^4.0.0:
     os-homedir "^1.0.1"
     pump "^2.0.1"
     rc "^1.1.6"
+    simple-get "^2.7.0"
+    tar-fs "^1.13.0"
+    tunnel-agent "^0.6.0"
+    which-pm-runs "^1.0.0"
+
+prebuild-install@^5.2.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-5.2.1.tgz#87ba8cf17c65360a75eefeb3519e87973bf9791d"
+  integrity sha512-9DAccsInWHB48TBQi2eJkLPE049JuAI6FjIH0oIrij4bpDVEbX6JvlWRAcAAlUqBHhjgq0jNqA3m3bBXWm9v6w==
+  dependencies:
+    detect-libc "^1.0.3"
+    expand-template "^1.0.2"
+    github-from-package "0.0.0"
+    minimist "^1.2.0"
+    mkdirp "^0.5.1"
+    napi-build-utils "^1.0.1"
+    node-abi "^2.2.0"
+    noop-logger "^0.1.1"
+    npmlog "^4.0.1"
+    os-homedir "^1.0.1"
+    pump "^2.0.1"
+    rc "^1.2.7"
     simple-get "^2.7.0"
     tar-fs "^1.13.0"
     tunnel-agent "^0.6.0"
@@ -12447,6 +12500,22 @@ sharp@^0.20.2:
     tar "^4.4.4"
     tunnel-agent "^0.6.0"
 
+sharp@^0.21.0:
+  version "0.21.0"
+  resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.21.0.tgz#e3cf2e4cb9382caf78efb3d45252381730e899c4"
+  integrity sha512-qr6yMl0ju8EGMtjIj5U1Ojj8sKuZ99/DQaNKWmoFHxqg3692AFSrEiPI/yr0O05OWtGD8LuCw8WSGmnZcNrZaA==
+  dependencies:
+    color "^3.0.0"
+    detect-libc "^1.0.3"
+    fs-copy-file-sync "^1.1.1"
+    nan "^2.11.1"
+    npmlog "^4.1.2"
+    prebuild-install "^5.2.0"
+    semver "^5.5.1"
+    simple-get "^3.0.3"
+    tar "^4.4.6"
+    tunnel-agent "^0.6.0"
+
 shebang-command@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/shebang-command/-/shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea"
@@ -12500,6 +12569,15 @@ simple-get@^2.7.0, simple-get@^2.8.1:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/simple-get/-/simple-get-2.8.1.tgz#0e22e91d4575d87620620bc91308d57a77f44b5d"
   integrity sha512-lSSHRSw3mQNUGPAYRqo7xy9dhKmxFXIjLjp4KHpf99GEH2VH7C3AM+Qfx6du6jhfUi6Vm7XnbEVEf7Wb6N8jRw==
+  dependencies:
+    decompress-response "^3.3.0"
+    once "^1.3.1"
+    simple-concat "^1.0.0"
+
+simple-get@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/simple-get/-/simple-get-3.0.3.tgz#924528ac3f9d7718ce5e9ec1b1a69c0be4d62efa"
+  integrity sha512-Wvre/Jq5vgoz31Z9stYWPLn0PqRqmBDpFSdypAnHu5AvRVCYPRYGnvryNLiXu8GOBNDH82J2FRHUGMjjHUpXFw==
   dependencies:
     decompress-response "^3.3.0"
     once "^1.3.1"
@@ -13311,6 +13389,19 @@ tar@^4, tar@^4.4.4:
     fs-minipass "^1.2.5"
     minipass "^2.3.3"
     minizlib "^1.1.0"
+    mkdirp "^0.5.0"
+    safe-buffer "^5.1.2"
+    yallist "^3.0.2"
+
+tar@^4.4.6:
+  version "4.4.7"
+  resolved "https://registry.yarnpkg.com/tar/-/tar-4.4.7.tgz#14df45023ffdcd0c233befa2fc01ebb76ee39e7c"
+  integrity sha512-mR3MzsCdN0IEWjZRuF/J9gaWHnTwOvzjqPTcvi1xXgfKTDQRp39gRETPQEfPByAdEOGmZfx1HrRsn8estaEvtA==
+  dependencies:
+    chownr "^1.1.1"
+    fs-minipass "^1.2.5"
+    minipass "^2.3.4"
+    minizlib "^1.1.1"
     mkdirp "^0.5.0"
     safe-buffer "^5.1.2"
     yallist "^3.0.2"
