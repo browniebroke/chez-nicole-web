@@ -26,7 +26,7 @@ class Navi extends React.Component {
                   Contact
                 </NaviItem>
                 <NaviItem url="/gallery/" location={location}>
-                  Gallery
+                  Photos
                 </NaviItem>
               </ul>
             </div>
