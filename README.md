@@ -4,7 +4,7 @@
 [![dependency Status](https://img.shields.io/david/browniebroke/chez-nicole-web.svg?style=flat-square)](https://david-dm.org/browniebroke/chez-nicole-web#info=dependencies)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/browniebroke/chez-nicole-web.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/browniebroke/chez-nicole-web/alerts/)
 
-Source code for the website for the restaurant "Chez Nicole". 
+Source code for the website for the restaurant "Chez Nicole".
 
-Built using [GatsbyJS](https://www.gatsbyjs.org/), based on the 
+Built using [GatsbyJS](https://www.gatsbyjs.org/), based on the
 [Gatstrap](https://github.com/jaxx2104/gatsby-starter-bootstrap) starter template.
