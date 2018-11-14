@@ -25,10 +25,10 @@ const Restaurant = ({ data, location }) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-md-12 text-center">
+            <div className="col-md-12">
               <img
                 alt="Restaurant"
-                className="img-thumbnail"
+                className="rounded mx-auto d-block"
                 src="/img/content/restaurant-original.jpg"
               />
             </div>

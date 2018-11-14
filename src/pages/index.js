@@ -27,11 +27,11 @@ const SiteIndex = ({ data, location }) => {
                 patronne.
               </p>
             </div>
-            <div className="col-md-12 text-center">
+            <div className="col-md-12">
               <img
                 src="/img/content/bar-original.jpg"
                 alt="Le bar"
-                className="img-thumbnail"
+                className="img-fluid rounded mx-auto d-block"
               />
             </div>
           </div>
