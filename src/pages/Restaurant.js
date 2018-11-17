@@ -28,7 +28,7 @@ const Restaurant = ({ data, location }) => {
             <div className="col-md-12">
               <img
                 alt="Restaurant"
-                className="rounded mx-auto d-block"
+                className="img-fluid rounded mx-auto d-block"
                 src="/img/content/restaurant-original.jpg"
               />
             </div>
