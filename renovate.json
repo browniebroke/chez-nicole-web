@@ -4,5 +4,6 @@
   "major": {
     "automerge": false
   },
+  "ignoreDeps": ["gatsby-plugin-sharp"],
   "supportPolicy": ["current"]
 }
