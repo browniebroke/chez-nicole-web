@@ -29,7 +29,7 @@ const Footer = ({ author, title }) => (
       <div className="text-center">
         <ul className="list-inline">
           {socialLinks.map(link => (
-            <li className="list-inline-item">
+            <li className="list-inline-item" key={link.name}>
               <a href={link.url} target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={['fab', link.name]} size="4x" />
               </a>
