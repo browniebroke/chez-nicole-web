@@ -25,6 +25,9 @@ const Restaurant = ({ data, location }) => {
             </div>
           </div>
           <div className="row">
+            <div id="TA_selfserveprop" />
+          </div>
+          <div className="row">
             <div className="col-md-12">
               <img
                 alt="Restaurant"
