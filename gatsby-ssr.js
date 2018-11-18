@@ -5,7 +5,7 @@ export const onRenderBody = function({ setPostBodyComponents }, pluginOptions) {
   const {
     locationId = 5800149,
     lang = 'fr',
-    rating = false,
+    rating = true,
     nreviews = 4,
     writeReviewLink = true,
     border = true,
@@ -16,7 +16,17 @@ export const onRenderBody = function({ setPostBodyComponents }, pluginOptions) {
   return setPostBodyComponents([
     <script
       key="trip-advisor-widget"
-      src={`https://www.tripadvisor.com/wejs?wtype=selfserveprop&amp;uniq=390&amp;locationId=${locationId}&amp;lang=${lang}&amp;rating=${rating}&amp;nreviews=${nreviews}&amp;writereviewlink=${writeReviewLink}&amp;popIdx=${popIdx}&amp;iswide=${isWide}&amp;border=${border}&amp;display_version=2`}
+      dangerouslySetInnerHTML={{
+        __html: stripIndent`
+(function(t,r,i,p){
+  i=t.createElement(r);
+  i.src="https://www.tripadvisor.com/WidgetEmbed-selfserveprop?amp;locationId=${locationId}&amp;writereviewlink=${writeReviewLink}&amp;rating=${rating}&amp;border=${border}&amp;uniq=390&amp;iswide=${isWide}&amp;popIdx=${popIdx}&amp;lang=${lang}&amp;nreviews=${nreviews}&amp;display_version=2";
+  i.async=true;
+  p=t.getElementsByTagName(r)[0];
+  p.parentNode.insertBefore(i,p);
+})(document,"script");
+    `,
+      }}
     />,
   ])
 }
