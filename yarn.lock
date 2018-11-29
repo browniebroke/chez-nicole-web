@@ -5995,10 +5995,10 @@ gatsby-plugin-react-next@^2.0.1-13:
     core-js "^2.5.1"
     resolve "^1.5.0"
 
-gatsby-plugin-sass@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.4.tgz#83c6bd04455c50adadd8d94fd6c376961b04a4fa"
-  integrity sha512-HS+JP4hzgUPLzsJ4MpDpFdPxC0ZVTv5VCt+g+NbhU15M4ntvcAYVw9TrgTH42+3ZbCyqvVOiYGEB5uq6p1c3zA==
+gatsby-plugin-sass@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sass/-/gatsby-plugin-sass-2.0.5.tgz#a5c86f2a380bb2527214cf49e654aa2dd3f9d211"
+  integrity sha512-yTOjQkscqFHtokTvfbP88weUhTggYvBb0DAvzo3Esxh5BMXM1CvGzHQ1vwbnO+KhS4YeSruyxNLQOu3zpX1t1w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
