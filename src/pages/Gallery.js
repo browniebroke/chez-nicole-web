@@ -5,8 +5,7 @@ import Layout from 'components/Layout'
 import get from 'lodash/get'
 import './gallery_style.scss'
 import Lightbox from 'react-image-lightbox'
-// import 'react-image-lightbox/style.css'
-import 'react-image-lightbox/src/style.css'
+import 'react-image-lightbox/style.css'
 
 class Gallery extends Component {
   constructor(props) {
