@@ -55,7 +55,7 @@
     "react": "16.6.3",
     "react-dom": "16.6.3",
     "react-helmet": "5.2.0",
-    "react-image-lightbox": "git+https://github.com/browniebroke/react-image-lightbox#fix-umd-bug",
+    "react-image-lightbox": "5.1.0",
     "textlint": "11.0.1",
     "textlint-rule-preset-ja-spacing": "2.0.1",
     "textlint-rule-preset-japanese": "4.0.0"
