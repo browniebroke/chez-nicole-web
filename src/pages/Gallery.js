@@ -2,79 +2,15 @@ import { graphql } from 'gatsby'
 import React, { Component } from 'react'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
-import Img from 'gatsby-image'
+import Gallery from 'components/Gallery'
 import get from 'lodash/get'
-import Lightbox from 'react-image-lightbox'
 import 'react-image-lightbox/style.css'
 
-class Gallery extends Component {
-  constructor(props) {
-    super(props)
-
-    const images = props.data.images.edges.map(edge => edge.node.full.fluid.src)
-    const thumbs = props.data.images.edges.map(edge => edge.node.thumb.fluid)
-
-    this.state = {
-      index: 0,
-      isOpen: false,
-      images: images,
-      thumbs: thumbs,
-    }
-
-    this.renderLightBox = this.renderLightBox.bind(this)
-    this.openLightBox = this.openLightBox.bind(this)
-    this.closeLightbox = this.closeLightbox.bind(this)
-    this.moveToIndex = this.moveToIndex.bind(this)
-    this.movePrev = this.movePrev.bind(this)
-    this.moveNext = this.moveNext.bind(this)
-  }
-
-  openLightBox(index) {
-    this.setState({
-      index: index,
-      isOpen: true,
-    })
-  }
-
-  renderLightBox() {
-    const { images, thumbs } = this.state
-    return (
-      <Lightbox
-        mainSrc={images[this.state.index]}
-        nextSrc={images[(this.state.index + 1) % images.length]}
-        prevSrc={images[(this.state.index + images.length - 1) % images.length]}
-        mainSrcThumbnail={thumbs[this.state.index]}
-        nextSrcThumbnail={thumbs[(this.state.index + 1) % images.length]}
-        prevSrcThumbnail={
-          thumbs[(this.state.index + images.length - 1) % images.length]
-        }
-        onCloseRequest={this.closeLightbox}
-        onMovePrevRequest={this.movePrev}
-        onMoveNextRequest={this.moveNext}
-      />
-    )
-  }
-
-  closeLightbox() {
-    this.setState({ isOpen: false })
-  }
-
-  moveToIndex(index) {
-    this.setState({
-      index,
-    })
-  }
-
-  movePrev() {
-    this.moveToIndex((this.state.index - 1) % this.state.images.length)
-  }
-
-  moveNext() {
-    this.moveToIndex((this.state.index + 1) % this.state.images.length)
-  }
-
+class GalleryPage extends Component {
   render() {
     let { data, location } = this.props
+    const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
+    const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
 
     return (
       <Layout location={location}>
@@ -89,22 +25,7 @@ class Gallery extends Component {
               <div className="col-md-12">
                 <h1>Gallerie de photos</h1>
                 <p>Voici quelques photos des lieux</p>
-                <div className="row">
-                  {this.state.thumbs.map((thumbnail, index) => {
-                    return (
-                      <div
-                        className="col-md-3 col-sm-6 px-0"
-                        key={index}
-                        onClick={() => this.openLightBox(index)}
-                      >
-                        <div className="m-1">
-                          <Img fluid={thumbnail} className="rounded" />
-                        </div>
-                      </div>
-                    )
-                  })}
-                </div>
-                {this.state.isOpen && this.renderLightBox()}
+                <Gallery images={fullSize} thumbs={thumbs} />
               </div>
             </div>
           </div>
@@ -114,7 +35,7 @@ class Gallery extends Component {
   }
 }
 
-export default Gallery
+export default GalleryPage
 
 export const pageQuery = graphql`
   query ImagesForGallery {
