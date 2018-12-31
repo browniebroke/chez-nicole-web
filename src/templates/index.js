@@ -3,7 +3,6 @@ import React from 'react'
 
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
-import Page from 'templates/Page'
 
 const Template = ({ data, location }) => (
   <div>
@@ -12,7 +11,7 @@ const Template = ({ data, location }) => (
         title={get(data, 'post.frontmatter.title')}
         site={get(data, 'site.meta')}
       />
-      <Page {...this.props} />
+      <div dangerouslySetInnerHTML={{ __html: data.post.html }} />
     </Layout>
   </div>
 )
