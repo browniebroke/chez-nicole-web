@@ -38,6 +38,7 @@
     "animate.css": "3.7.0",
     "babel-eslint": "10.0.1",
     "bootstrap": "4.2.1",
+    "bundlesize": "^0.17.0",
     "emergence.js": "1.1.2",
     "eslint": "5.11.1",
     "eslint-config-prettier": "3.3.0",
@@ -76,9 +77,21 @@
       "git add"
     ]
   },
+  "bundlesize": [
+    {
+      "path": "./public/app-*.js",
+      "maxSize": "100 kB"
+    },
+    {
+      "path": "./public/component---src-pages*.js",
+      "maxSize": "10 kB"
+    }
+  ],
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
+    "prebundlesize": "yarn run build",
+    "bundlesize": "bundlesize",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
