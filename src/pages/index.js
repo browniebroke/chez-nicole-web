@@ -1,6 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
@@ -28,11 +29,7 @@ const SiteIndex = ({ data, location }) => {
               </p>
             </div>
             <div className="col-md-12">
-              <img
-                src="/img/content/bar-original.jpg"
-                alt="Le bar"
-                className="img-fluid rounded mx-auto d-block"
-              />
+              <Img fluid={data.file.childImageSharp.fluid} alt="Le Bar" />
             </div>
           </div>
         </div>
@@ -52,6 +49,13 @@ export const pageQuery = graphql`
         siteUrl
         author
         image
+      }
+    }
+    file(relativePath: { eq: "img/content/bar-original.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1700) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }
