@@ -3,6 +3,7 @@ import React from 'react'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 import get from 'lodash/get'
+import Img from 'gatsby-image'
 
 const Restaurant = ({ data, location }) => {
   return (
@@ -24,12 +25,12 @@ const Restaurant = ({ data, location }) => {
               </p>
             </div>
           </div>
-          <div className="row">
-            <div className="col-md-12">
-              <img
-                alt="Restaurant"
-                className="img-fluid rounded mx-auto d-block"
-                src="/img/content/restaurant-original.jpg"
+          <div className="row justify-content-center">
+            <div className="col-lg-8">
+              <Img
+                fluid={data.file.childImageSharp.fluid}
+                alt="La salle de restaurant"
+                className="rounded"
               />
             </div>
           </div>
@@ -50,6 +51,13 @@ export const pageQuery = graphql`
         siteUrl
         author
         image
+      }
+    }
+    file(relativePath: { eq: "img/content/restaurant-original.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1700) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
   }
