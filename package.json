@@ -94,6 +94,8 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
+    "prebundlesize": "yarn run build",
+    "bundlesize": "bundlesize",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
