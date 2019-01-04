@@ -704,6 +704,13 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@browniebroke/gatsby-image-gallery@0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@browniebroke/gatsby-image-gallery/-/gatsby-image-gallery-0.3.1.tgz#1638a54f5a5d208ada962cc3af6643d8364b2e45"
+  integrity sha512-lMRnNNqPKACuUBXlTFrVLUaNE73afY+oYuaUOscq4LhISywGe43EcPsXjmWaV88P2D1F9nwR2beqH1EeslnJ9Q==
+  dependencies:
+    react-image-lightbox "5.1.0"
+
 "@fortawesome/fontawesome-common-types@^0.2.12":
   version "0.2.12"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.12.tgz#42baa71f97ca06faeb0b6718fa5ed20c5eefdf07"
