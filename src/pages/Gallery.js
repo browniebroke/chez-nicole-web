@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 import React, { Component } from 'react'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
-import Gallery from 'components/Gallery'
+import Gallery from '@browniebroke/gatsby-image-gallery'
 import get from 'lodash/get'
 import 'react-image-lightbox/style.css'
 
