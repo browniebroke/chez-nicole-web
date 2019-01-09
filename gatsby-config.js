@@ -58,6 +58,16 @@ module.exports = {
         trackingId: 'UA-126206092-1',
       },
     },
+    {
+      resolve: `gatsby-plugin-sentry`,
+      options: {
+        dsn: 'https://4422fdb09f984c698c6de2cc1d491354@sentry.io/1367992',
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
