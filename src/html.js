@@ -37,6 +37,10 @@ export default class HTML extends React.Component {
           <link rel="shortcut icon" href="/img/favicon.ico" />
           <meta name="msapplication-TileColor" content="#b2d233" />
           <meta name="msapplication-config" content="/img/browserconfig.xml" />
+          <meta
+            name="google-site-verification"
+            content="7Pw3s9Q9ki7wRcTUKpm8XxFOYs3HdCSNPOziMhpk584"
+          />
         </head>
         <body>
           <div className="container main-container">
