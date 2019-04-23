@@ -74,13 +74,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
-    {
-      resolve: `gatsby-plugin-netlify`, // Needs to be last
-      options: {
-        headers: {
-          '/*': ['Referrer-Policy: same-origin'],
-        },
-      },
-    },
+    `gatsby-plugin-netlify`, // Needs to be last
   ],
 }
