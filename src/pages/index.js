@@ -53,7 +53,7 @@ export const pageQuery = graphql`
     }
     file(relativePath: { eq: "img/content/bar-original.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1700) {
+        fluid(maxWidth: 1700, srcSetBreakpoints: [576, 768, 992, 1200]) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
