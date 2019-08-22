@@ -5,9 +5,9 @@
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "0.5.1",
-    "@fortawesome/fontawesome-svg-core": "1.2.21",
-    "@fortawesome/free-brands-svg-icons": "5.10.1",
-    "@fortawesome/free-solid-svg-icons": "5.10.1",
+    "@fortawesome/fontawesome-svg-core": "1.2.22",
+    "@fortawesome/free-brands-svg-icons": "5.10.2",
+    "@fortawesome/free-solid-svg-icons": "5.10.2",
     "@fortawesome/react-fontawesome": "0.1.4",
     "bootstrap": "4.3.1",
     "font-awesome": "4.7.0",
