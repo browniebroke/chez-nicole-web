@@ -4,7 +4,7 @@ import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import get from 'lodash/get'
-import 'react-image-lightbox/style.css'
+import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 class GalleryPage extends Component {
   render() {
