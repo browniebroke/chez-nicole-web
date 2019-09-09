@@ -11,7 +11,7 @@
     <img src="https://travis-ci.com/browniebroke/chez-nicole-web.svg?branch=master" alt="Build status"/>
   </a>
   <a href="https://github.com/browniebroke/chez-nicole-web/actions">
-    <img src="https://github.com/browniebroke/chez-nicole-web/workflows/.github/workflows/lighthouse.yml/badge.svg" alt="Lighthouse"/>
+    <img src="https://github.com/browniebroke/chez-nicole-web/workflows/Lighthouse/badge.svg" alt="Lighthouse"/>
   </a>
   <a href="https://www.netlify.com">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
