@@ -25,11 +25,7 @@ class GalleryPage extends Component {
               <div className="col-md-12">
                 <h1>Photos</h1>
                 <p>Pour donner un petit aperçu du menu et des lieux</p>
-                <Gallery
-                  images={fullSize}
-                  thumbs={thumbs}
-                  colClass="col-4 col-md-3"
-                />
+                <Gallery images={fullSize} thumbs={thumbs} />
               </div>
             </div>
           </div>
