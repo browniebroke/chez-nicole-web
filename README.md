@@ -24,4 +24,4 @@
 Source code for the website for the restaurant "Chez Nicole".
 
 Built using [GatsbyJS](https://www.gatsbyjs.org/), based on the
-[Gatstrap](https://github.com/jaxx2104/gatsby-starter-bootstrap) starter template.
+[Gatstrap](https://github.com/jaxx2104/gatsby-starter-bootstrap) starter template and deployed to Netlify.
