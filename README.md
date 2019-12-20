@@ -16,9 +16,6 @@
   <a href="https://www.netlify.com">
     <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
   </a>
-  <a href="https://github.com/browniebroke/chez-nicole-web">
-    <img src="https://tokei.rs/b1/github/browniebroke/chez-nicole-web" alt="Lines of Codes"/>
-  </a>
 </p>
 
 Source code for the website for the restaurant "Chez Nicole".
