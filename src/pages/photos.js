@@ -1,38 +1,36 @@
 import { graphql } from 'gatsby'
-import React, { Component } from 'react'
+import React from 'react'
 import Meta from 'components/Meta'
 import Layout from 'components/Layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import get from 'lodash/get'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
-class GalleryPage extends Component {
-  render() {
-    let { data, location } = this.props
-    const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
-    const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
+const GalleryPage = props => {
+  let { data, location } = props
+  const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
+  const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
 
-    return (
-      <Layout location={location}>
-        <Meta
-          site={get(data, 'site.meta')}
-          title="Gallerie"
-          location={location}
-        />
-        <div className="container-fluid">
-          <div className="my-4">
-            <div className="row">
-              <div className="col-md-12">
-                <h1>Photos</h1>
-                <p>Pour donner un petit aperçu du menu et des lieux</p>
-                <Gallery images={fullSize} thumbs={thumbs} />
-              </div>
+  return (
+    <Layout location={location}>
+      <Meta
+        site={get(data, 'site.meta')}
+        title="Gallerie"
+        location={location}
+      />
+      <div className="container-fluid">
+        <div className="my-4">
+          <div className="row">
+            <div className="col-md-12">
+              <h1>Photos</h1>
+              <p>Pour donner un petit aperçu du menu et des lieux</p>
+              <Gallery images={fullSize} thumbs={thumbs} />
             </div>
           </div>
         </div>
-      </Layout>
-    )
-  }
+      </div>
+    </Layout>
+  )
 }
 
 export default GalleryPage
