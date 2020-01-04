@@ -42,6 +42,7 @@
     "textlint": "11.5.0"
   },
   "resolutions": {
+    "**/svgo/js-yaml": "^3.13.1",
     "lodash.template": "^4.5.0",
     "set-value": "^2.0.1"
   },
