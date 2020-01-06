@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Meta from 'components/Meta'
-import Layout from 'components/Layout'
+import Meta from '../components/meta'
+import Layout from '../components/layout'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 

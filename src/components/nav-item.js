@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-class NaviItem extends React.Component {
+class NavItem extends React.Component {
   render() {
     const { location, url, children } = this.props
 
@@ -17,4 +17,4 @@ class NaviItem extends React.Component {
   }
 }
 
-export default NaviItem
+export default NavItem

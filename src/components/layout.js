@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Navi from 'components/Navi'
-import Footer from 'components/Footer'
-import { siteMetadata } from '../../../gatsby-config'
+import Nav from './nav'
+import Footer from './footer'
+import { siteMetadata } from '../../gatsby-config'
 
 import 'scss/gatstrap.scss'
 
@@ -11,7 +11,7 @@ class Layout extends React.Component {
     const { children } = this.props
     return (
       <div className="container main-container">
-        <Navi title={siteMetadata.title} {...this.props} />
+        <Nav title={siteMetadata.title} {...this.props} />
         {children}
         <Footer title={siteMetadata.title} author={siteMetadata.author} />
       </div>

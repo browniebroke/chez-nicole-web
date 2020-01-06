@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import NaviItem from './navi-item'
+import NaviItem from './nav-item'
 
-class Navi extends React.Component {
+class Nav extends React.Component {
   render() {
     const { location, title } = this.props
     return (
@@ -38,4 +38,4 @@ class Navi extends React.Component {
   }
 }
 
-export default Navi
+export default Nav
