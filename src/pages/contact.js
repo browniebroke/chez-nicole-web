@@ -2,10 +2,10 @@ import React from 'react'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const Contact = ({ location }) => {
+const Contact = props => {
   return (
     <Layout
-      location={location}
+      path={props.path}
       title="Contact"
       description="Comment nous contacter: téléphone, addresse, email."
     >

@@ -6,13 +6,13 @@ import '@browniebroke/gatsby-image-gallery/dist/style.css'
 import Container from '../components/container'
 
 const GalleryPage = props => {
-  let { data, location } = props
+  let { data, path } = props
   const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
   const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
 
   return (
     <Layout
-      location={location}
+      path={path}
       title="Gallerie"
       description="Pour donner un petit aperçu du menu et des lieux"
     >

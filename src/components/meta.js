@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { siteMetadata } from '../../gatsby-config'
 
-const Meta = ({ title, description, location, image }) => {
+const Meta = ({ title, description, path, image }) => {
   const pageTitle = title
     ? `${title} | ${siteMetadata.title}`
     : siteMetadata.title
@@ -21,7 +21,7 @@ const Meta = ({ title, description, location, image }) => {
         },
         {
           property: 'og:url',
-          content: `${siteMetadata.siteUrl}${location.pathname}`,
+          content: `${siteMetadata.siteUrl}${path}`,
         },
         {
           property: 'og:image',

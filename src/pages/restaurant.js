@@ -4,15 +4,15 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import Container from '../components/container'
 
-const Restaurant = ({ data, location }) => {
+const Restaurant = props => {
   return (
     <Layout
-      location={location}
+      path={props.path}
       title="Restaurant"
       description="Quelques details sur notre restaurant, heure d'ouvertures et menu"
     >
       <Img
-        fluid={data.file.childImageSharp.fluid}
+        fluid={props.data.file.childImageSharp.fluid}
         alt="La salle de restaurant"
         className="img-fluid"
       />

@@ -5,9 +5,9 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const SiteIndex = ({ data, location }) => {
+const SiteIndex = props => {
   return (
-    <Layout location={location} title="Acceuil">
+    <Layout path={props.path} title="Acceuil">
       <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
@@ -27,7 +27,7 @@ const SiteIndex = ({ data, location }) => {
               </p>
             </div>
             <div className="col-md-12">
-              <Img fluid={data.file.childImageSharp.fluid} alt="Le Bar" />
+              <Img fluid={props.data.file.childImageSharp.fluid} alt="Le Bar" />
             </div>
           </div>
         </div>

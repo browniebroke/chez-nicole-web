@@ -8,10 +8,10 @@ import '../scss/gatstrap.scss'
 import Meta from './meta'
 
 const Layout = props => {
-  const { children, title, description, location } = props
+  const { children, title, description, path } = props
   return (
     <React.Fragment>
-      <Meta title={title} location={location} description={description} />
+      <Meta title={title} path={path} description={description} />
       <Container isMain={true}>
         <Nav {...props} />
         {children}
