@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaGoogle, FaTripadvisor } from 'react-icons/fa'
 import Container from './container'
+import SocialLinkItem from './social-link-item'
 
 const Footer = () => (
   <div className="footer py-5 small">
@@ -14,33 +15,18 @@ const Footer = () => (
       />
       <div className="text-center">
         <ul className="list-inline">
-          <li className="list-inline-item">
-            <a
-              href="https://www.facebook.com/ChezNicoleSauclieres/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaFacebook size="4em" />
-            </a>
-          </li>
-          <li className="list-inline-item">
-            <a
-              href="https://goo.gl/maps/d8H73U3N73G2"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGoogle size="4em" />
-            </a>
-          </li>
-          <li className="list-inline-item">
-            <a
-              href="https://www.tripadvisor.fr/Restaurant_Review-g2435151-d5800149-Reviews-Chez_Nicole-Sauclieres_Aveyron_Occitanie.html"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaTripadvisor size="4em" />
-            </a>
-          </li>
+          <SocialLinkItem
+            url="https://www.facebook.com/ChezNicoleSauclieres/"
+            logo={FaFacebook}
+          />
+          <SocialLinkItem
+            url="https://goo.gl/maps/d8H73U3N73G2"
+            logo={FaGoogle}
+          />
+          <SocialLinkItem
+            url="https://www.tripadvisor.fr/Restaurant_Review-g2435151-d5800149-Reviews-Chez_Nicole-Sauclieres_Aveyron_Occitanie.html"
+            logo={FaTripadvisor}
+          />
         </ul>
       </div>
       <div className="text-center">
