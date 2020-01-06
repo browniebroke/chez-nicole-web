@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import NaviItem from './nav-item'
 
-const Nav = props => {
-  const { location, title } = props
+const Nav = (location, title) => {
   return (
     <React.Fragment>
       <div className="row mx-1">
