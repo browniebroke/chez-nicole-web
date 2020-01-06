@@ -4,7 +4,7 @@ import Nav from './nav'
 import Footer from './footer'
 import Container from './container'
 
-import 'scss/gatstrap.scss'
+import '../scss/gatstrap.scss'
 import Meta from './meta'
 
 const Layout = props => {
