@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 import get from 'lodash/get'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
+import Container from '../components/container'
 
 const GalleryPage = props => {
   let { data, location } = props
@@ -18,7 +19,7 @@ const GalleryPage = props => {
         title="Gallerie"
         location={location}
       />
-      <div className="container-fluid">
+      <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
             <div className="col-md-12">
@@ -28,7 +29,7 @@ const GalleryPage = props => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }

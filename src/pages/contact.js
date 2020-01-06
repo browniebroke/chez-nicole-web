@@ -3,12 +3,13 @@ import React from 'react'
 import Meta from '../components/meta'
 import Layout from '../components/layout'
 import get from 'lodash/get'
+import Container from '../components/container'
 
 const Contact = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} title="Contact" location={location} />
-      <div className="container-fluid">
+      <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
             <div className="col-md-12 my-3">
@@ -40,7 +41,7 @@ const Contact = ({ data, location }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }

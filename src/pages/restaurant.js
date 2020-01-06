@@ -4,6 +4,7 @@ import Meta from '../components/meta'
 import Layout from '../components/layout'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
+import Container from '../components/container'
 
 const Restaurant = ({ data, location }) => {
   return (
@@ -19,7 +20,7 @@ const Restaurant = ({ data, location }) => {
         alt="La salle de restaurant"
         className="img-fluid"
       />
-      <div className="container-fluid">
+      <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
             <div className="col-md-12">
@@ -42,7 +43,7 @@ const Restaurant = ({ data, location }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }

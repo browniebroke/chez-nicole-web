@@ -5,12 +5,13 @@ import Img from 'gatsby-image'
 
 import Meta from '../components/meta'
 import Layout from '../components/layout'
+import Container from '../components/container'
 
 const SiteIndex = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Meta site={get(data, 'site.meta')} title="Acceuil" location={location} />
-      <div className="container-fluid">
+      <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
             <div className="col-md-12">
@@ -33,7 +34,7 @@ const SiteIndex = ({ data, location }) => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </Layout>
   )
 }
