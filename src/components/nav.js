@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import NaviItem from './nav-item'
 
-const Nav = location => {
+const Nav = props => {
+  const currentPath = props.currentPath
   return (
     <React.Fragment>
       <div className="row mx-1">
@@ -18,16 +19,16 @@ const Nav = location => {
         <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
           <div className="navbar-nav-scroll">
             <ul className="navbar-nav bd-navbar-nav flex-row">
-              <NaviItem url="/" location={location}>
+              <NaviItem url="/" currentPath={currentPath}>
                 Accueil
               </NaviItem>
-              <NaviItem url="/restaurant/" location={location}>
+              <NaviItem url="/restaurant/" currentPath={currentPath}>
                 Restaurant
               </NaviItem>
-              <NaviItem url="/contact/" location={location}>
+              <NaviItem url="/contact/" currentPath={currentPath}>
                 Contact
               </NaviItem>
-              <NaviItem url="/photos/" location={location}>
+              <NaviItem url="/photos/" currentPath={currentPath}>
                 Photos
               </NaviItem>
             </ul>

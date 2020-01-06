@@ -13,7 +13,7 @@ const Layout = props => {
     <React.Fragment>
       <Meta title={title} path={path} description={description} />
       <Container isMain={true}>
-        <Nav {...props} />
+        <Nav currentPath={path} />
         {children}
         <Footer />
       </Container>

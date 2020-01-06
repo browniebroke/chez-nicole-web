@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 const NavItem = props => {
-  const { location, url, children } = props
+  const { currentPath, url, children } = props
   return (
-    <li className={location === url ? 'nav-item active' : 'nav-item'}>
+    <li className={`nav-item${currentPath === url ? ' active' : ''}`}>
       <Link to={url} className="nav-link">
         {children}
       </Link>
