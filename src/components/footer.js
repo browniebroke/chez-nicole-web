@@ -2,7 +2,7 @@ import React from 'react'
 import { FaFacebook, FaGoogle, FaTripadvisor } from 'react-icons/fa'
 import Container from './container'
 
-const Footer = ({ author, title }) => (
+const Footer = () => (
   <div className="footer py-5 small">
     <Container>
       <hr

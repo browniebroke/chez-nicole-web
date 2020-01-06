@@ -1,20 +1,16 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Meta from '../components/meta'
 import Layout from '../components/layout'
-import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Container from '../components/container'
 
 const Restaurant = ({ data, location }) => {
   return (
-    <Layout location={location}>
-      <Meta
-        site={get(data, 'site.meta')}
-        title="Restaurant"
-        location={location}
-      />
-
+    <Layout
+      location={location}
+      title="Restaurant"
+      description="Quelques details sur notre restaurant, heure d'ouvertures et menu"
+    >
       <Img
         fluid={data.file.childImageSharp.fluid}
         alt="La salle de restaurant"
@@ -52,15 +48,6 @@ export default Restaurant
 
 export const pageQuery = graphql`
   query {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        image
-      }
-    }
     file(relativePath: { eq: "img/content/restaurant-artistique.jpg" }) {
       childImageSharp {
         fluid(

@@ -1,9 +1,7 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import Meta from '../components/meta'
 import Layout from '../components/layout'
 import Gallery from '@browniebroke/gatsby-image-gallery'
-import get from 'lodash/get'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 import Container from '../components/container'
 
@@ -13,12 +11,11 @@ const GalleryPage = props => {
   const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
 
   return (
-    <Layout location={location}>
-      <Meta
-        site={get(data, 'site.meta')}
-        title="Gallerie"
-        location={location}
-      />
+    <Layout
+      location={location}
+      title="Gallerie"
+      description="Pour donner un petit aperçu du menu et des lieux"
+    >
       <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
@@ -38,15 +35,6 @@ export default GalleryPage
 
 export const pageQuery = graphql`
   query ImagesForGallery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        image
-      }
-    }
     images: allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
       edges {
         node {

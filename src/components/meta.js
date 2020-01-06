@@ -1,33 +1,31 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import get from 'lodash/get'
+import { siteMetadata } from '../../gatsby-config'
 
-const Meta = ({ site, title, location, image }) => {
-  const siteTitle = 'Chez Nicole'
-  title = title ? `${title} | ${siteTitle}` : siteTitle
-  image = image ? image : site.image
+const Meta = ({ title, description, location, image }) => {
+  const pageTitle = title
+    ? `${title} | ${siteMetadata.title}`
+    : siteMetadata.title
+  const pageImage = image ? image : siteMetadata.image
+  const pageDescription = description ? description : siteMetadata.description
   return (
     <Helmet
       title={title}
       meta={[
         { name: 'twitter:card', content: 'summary' },
-        {
-          name: 'twitter:site',
-          content: `@${get(site, 'twitter')}`,
-        },
-        { property: 'og:title', content: title },
+        { property: 'og:title', content: pageTitle },
         { property: 'og:type', content: 'website' },
         {
           property: 'og:description',
-          content: get(site, 'description'),
+          content: pageDescription,
         },
         {
           property: 'og:url',
-          content: `${get(site, 'siteUrl')}${location.pathname}`,
+          content: `${siteMetadata.siteUrl}${location.pathname}`,
         },
         {
           property: 'og:image',
-          content: `${get(site, 'siteUrl')}${image}`,
+          content: `${siteMetadata.siteUrl}${pageImage}`,
         },
       ]}
     />

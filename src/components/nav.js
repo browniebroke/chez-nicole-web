@@ -2,12 +2,16 @@ import React from 'react'
 import { Link } from 'gatsby'
 import NaviItem from './nav-item'
 
-const Nav = (location, title) => {
+const Nav = location => {
   return (
     <React.Fragment>
       <div className="row mx-1">
         <Link to="/" className="navbar-brand">
-          <img src="/img/logo.png" alt={title} className="img-fluid" />
+          <img
+            src="/img/logo.png"
+            alt="Logo du restaurant"
+            className="img-fluid"
+          />
         </Link>
       </div>
       <div className="m-b-1">

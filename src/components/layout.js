@@ -3,18 +3,21 @@ import React from 'react'
 import Nav from './nav'
 import Footer from './footer'
 import Container from './container'
-import { siteMetadata } from '../../gatsby-config'
 
 import 'scss/gatstrap.scss'
+import Meta from './meta'
 
 const Layout = props => {
-  const { children } = props
+  const { children, title, description, location } = props
   return (
-    <Container isMain={true}>
-      <Nav title={siteMetadata.title} {...props} />
-      {children}
-      <Footer title={siteMetadata.title} author={siteMetadata.author} />
-    </Container>
+    <React.Fragment>
+      <Meta title={title} location={location} description={description} />
+      <Container isMain={true}>
+        <Nav {...props} />
+        {children}
+        <Footer />
+      </Container>
+    </React.Fragment>
   )
 }
 

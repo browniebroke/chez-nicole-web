@@ -1,16 +1,13 @@
 import { graphql } from 'gatsby'
 import React from 'react'
-import get from 'lodash/get'
 import Img from 'gatsby-image'
 
-import Meta from '../components/meta'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
 const SiteIndex = ({ data, location }) => {
   return (
-    <Layout location={location}>
-      <Meta site={get(data, 'site.meta')} title="Acceuil" location={location} />
+    <Layout location={location} title="Acceuil">
       <Container isFluid={true}>
         <div className="my-4">
           <div className="row">
@@ -43,15 +40,6 @@ export default SiteIndex
 
 export const pageQuery = graphql`
   query IndexQuery {
-    site {
-      meta: siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        image
-      }
-    }
     file(relativePath: { eq: "img/content/bar-original.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1700, srcSetBreakpoints: [576, 768, 992, 1200]) {
