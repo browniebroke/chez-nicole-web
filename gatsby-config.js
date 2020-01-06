@@ -38,18 +38,7 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#b2d233',
         display: 'standalone',
-        icons: [
-          {
-            src: '/img/android-chrome-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/img/android-chrome-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
+        icon: 'static/img/favicon.png',
       },
     },
     {
