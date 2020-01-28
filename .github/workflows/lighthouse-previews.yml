@@ -1,10 +1,7 @@
-name: Lighthouse
+name: Lighthouse Deploy Previews
 
 on:
   pull_request:
-    branches: 
-    - master
-  push:
     branches:
     - master
 
@@ -13,7 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Wait for deploy
-      run: sleep 360  # 6 mins in seconds
+      uses: maddox/actions/wait-for-200@master
+      env:
+        URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--chez-nicole.netlify.com/'
+        SECONDS_BETWEEN_CHECKS: 20
+        MAX_TRIES: 30
     - name: Lighthouse Audit
       uses: jakejarvis/lighthouse-action@master
       with:
