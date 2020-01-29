@@ -10,6 +10,9 @@ const Meta = ({ title, description, path, image }) => {
   const pageDescription = description ? description : siteMetadata.description
   return (
     <Helmet
+      htmlAttributes={{
+        lang: 'fr',
+      }}
       title={title}
       meta={[
         { name: 'twitter:card', content: 'summary' },

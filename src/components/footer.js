@@ -18,14 +18,17 @@ const Footer = () => (
           <SocialLinkItem
             url="https://www.facebook.com/ChezNicoleSauclieres/"
             logo={FaFacebook}
+            label="Notre page Facebook"
           />
           <SocialLinkItem
             url="https://goo.gl/maps/d8H73U3N73G2"
             logo={FaGoogle}
+            label="Sur Google"
           />
           <SocialLinkItem
             url="https://www.tripadvisor.fr/Restaurant_Review-g2435151-d5800149-Reviews-Chez_Nicole-Sauclieres_Aveyron_Occitanie.html"
             logo={FaTripadvisor}
+            label="Page Tripadvisor"
           />
         </ul>
       </div>
