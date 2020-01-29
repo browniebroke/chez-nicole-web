@@ -15,9 +15,25 @@ const Meta = ({ title, description, path, image }) => {
       }}
       title={title}
       meta={[
+        {
+          name: `description`,
+          content: pageDescription,
+        },
         { name: 'twitter:card', content: 'summary' },
+        {
+          name: `twitter:title`,
+          content: pageTitle,
+        },
+        {
+          name: `twitter:description`,
+          content: pageDescription,
+        },
         { property: 'og:title', content: pageTitle },
         { property: 'og:type', content: 'website' },
+        {
+          name: `og:locale`,
+          content: 'fr',
+        },
         {
           property: 'og:description',
           content: pageDescription,
