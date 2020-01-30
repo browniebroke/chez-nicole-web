@@ -20,7 +20,7 @@ jobs:
       with:
         url: 'https://www.chez-nicole.fr'
         netlify_site: 'chez-nicole.netlify.com'
-    - uses: actions/upload-artifact@master
-      with:
-        name: report
-        path: './report'
+    - name: Upload report to Zeit
+      run: now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html
+    - name: Link to report
+      run: now -t ${{ secrets.ZEIT_TOKEN }} ls files
