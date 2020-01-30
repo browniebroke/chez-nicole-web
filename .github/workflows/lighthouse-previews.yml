@@ -21,6 +21,17 @@ jobs:
         url: 'https://www.chez-nicole.fr'
         netlify_site: 'chez-nicole.netlify.com'
     - name: Upload report to Zeit
-      run: now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html
+      run: now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
     - name: Link to report
-      run: now -t ${{ secrets.ZEIT_TOKEN }} ls files
+      run: TARGET_URL=`tail -n1 zeit-now.log`
+    - name: Update status to success
+      uses: geekodour/gh-actions-custom-status@v0.0.4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_REPOSITORY: ${{ github.repository }}
+        LAST_COMMIT_SHA: ${{ github.event.client_payload.LAST_COMMIT_SHA }}
+      with:
+        args: >-
+          --state=success
+          --context=lighthouse-report
+          --target_url=${TARGET_URL}
