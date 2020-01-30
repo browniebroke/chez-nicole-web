@@ -27,9 +27,9 @@ jobs:
     - name: Update status to success
       uses: geekodour/gh-actions-custom-status@v0.0.4
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ github.token }}
         GITHUB_REPOSITORY: ${{ github.repository }}
-        LAST_COMMIT_SHA: ${{ github.event.client_payload.LAST_COMMIT_SHA }}
+        LAST_COMMIT_SHA: ${{ github.sha }}
       with:
         args: >-
           --state=success
