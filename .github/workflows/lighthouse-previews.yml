@@ -23,15 +23,16 @@ jobs:
     - name: Upload report to Zeit
       run: now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
     - name: Link to report
-      run: TARGET_URL=`tail -n1 zeit-now.log`
+      run: |
+        TARGET_URL=`tail -n1 zeit-now.log`
+        echo "${TARGET_URL}"
     - name: Update status to success
-      uses: geekodour/gh-actions-custom-status@v0.0.4
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        LAST_COMMIT_SHA: ${{ github.sha }}
-      with:
-        args: >-
-          --state=success
-          --context=lighthouse-report
-          --target_url=${TARGET_URL}
+      run: |
+        curl -X POST https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -d "{
+            \"state\": \"success\",
+            \"target_url\": \"${TARGET_URL}\",
+            \"description\": \"Lighthouse report\",
+            \"context\": \"lighthouse-report\"
+          }"
