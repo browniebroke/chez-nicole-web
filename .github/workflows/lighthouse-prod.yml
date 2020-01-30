@@ -9,6 +9,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Initialise LH status to pending
+      run: |
+        curl -X POST https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -d "{
+            \"state\": \"pending\",
+            \"description\": \"Lighthouse report\",
+            \"context\": \"lighthouse-report\"
+          }"
     - name: Wait for deploy
       run: sleep 360  # 6 mins in seconds
     - name: Lighthouse Audit
