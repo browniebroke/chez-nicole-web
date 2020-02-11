@@ -35,7 +35,7 @@
     "eslint-plugin-react": "7.18.3",
     "node-sass": "4.13.1",
     "prettier": "1.19.1",
-    "textlint": "11.6.2"
+    "textlint": "11.6.3"
   },
   "resolutions": {
     "**/svgo/js-yaml": "^3.13.1",
