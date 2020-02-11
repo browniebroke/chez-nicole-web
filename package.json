@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "2.0.1",
     "bootstrap": "4.4.1",
-    "gatsby": "2.19.12",
+    "gatsby": "2.19.15",
     "gatsby-image": "2.2.40",
     "gatsby-link": "2.2.29",
     "gatsby-plugin-google-analytics": "2.1.35",
