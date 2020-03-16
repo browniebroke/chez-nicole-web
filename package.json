@@ -37,11 +37,6 @@
     "prettier": "1.19.1",
     "textlint": "11.6.3"
   },
-  "resolutions": {
-    "**/svgo/js-yaml": "3.13.1",
-    "lodash.template": "4.5.0",
-    "set-value": "2.0.1"
-  },
   "keywords": [
     "gatsby",
     "gatstrap",
