@@ -7,7 +7,7 @@ import Container from './container'
 import '../scss/gatstrap.scss'
 import Meta from './meta'
 
-const Layout = props => {
+const Layout = (props) => {
   const { children, title, description, path } = props
   return (
     <React.Fragment>

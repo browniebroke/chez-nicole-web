@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const Contact = props => (
+const Contact = (props) => (
   <Layout
     path={props.path}
     title="Contact"

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SocialLinkItem = props => {
+const SocialLinkItem = (props) => {
   return (
     <li className="list-inline-item">
       <a

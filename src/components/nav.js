@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import NaviItem from './nav-item'
 
-const Nav = props => {
+const Nav = (props) => {
   const currentPath = props.currentPath
   return (
     <React.Fragment>
