@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
   "dependencies": {
-    "@browniebroke/gatsby-image-gallery": "3.0.0",
+    "@browniebroke/gatsby-image-gallery": "3.2.0",
     "bootstrap": "4.4.1",
     "gatsby": "2.20.3",
     "gatsby-image": "2.3.1",
@@ -54,7 +54,7 @@
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
-      "maxSize": "30 kB"
+      "maxSize": "35 kB"
     }
   ],
   "main": "n/a",
