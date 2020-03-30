@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const SiteIndex = props => (
+const SiteIndex = (props) => (
   <Layout path={props.path} title="Acceuil">
     <Container isFluid={true}>
       <div className="my-4">

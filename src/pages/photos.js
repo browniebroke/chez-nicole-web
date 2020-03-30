@@ -5,10 +5,10 @@ import Gallery from '@browniebroke/gatsby-image-gallery'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 import Container from '../components/container'
 
-const GalleryPage = props => {
+const GalleryPage = (props) => {
   let { data, path } = props
-  const fullSize = data.images.edges.map(edge => edge.node.full.fluid.src)
-  const thumbs = data.images.edges.map(edge => edge.node.thumb.fluid)
+  const fullSize = data.images.edges.map((edge) => edge.node.full.fluid.src)
+  const thumbs = data.images.edges.map((edge) => edge.node.thumb.fluid)
 
   return (
     <Layout

@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Img from 'gatsby-image'
 import Container from '../components/container'
 
-const Restaurant = props => (
+const Restaurant = (props) => (
   <Layout
     path={props.path}
     title="Restaurant"

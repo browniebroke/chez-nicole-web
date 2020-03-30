@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const NavItem = props => {
+const NavItem = (props) => {
   const { currentPath, url, children } = props
   return (
     <li className={`nav-item${currentPath === url ? ' active' : ''}`}>
