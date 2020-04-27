@@ -19,7 +19,7 @@ jobs:
       uses: jakejarvis/lighthouse-action@master
       with:
         url: 'https://www.chez-nicole.fr'
-        netlify_site: 'chez-nicole.netlify.com'
+        netlify_site: 'chez-nicole.netlify.app'
     - name: Upload report to Zeit
       run: |
         now -t ${{ secrets.ZEIT_TOKEN }} deploy ./report/https*.html | tee zeit-now.log
