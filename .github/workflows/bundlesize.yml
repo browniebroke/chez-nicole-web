@@ -1,4 +1,4 @@
-name: Bundlesize
+name: Bundlewatch
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  bundlesize:
+  bundlewatch:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,6 +16,6 @@ jobs:
       with:
         node-version: 12
     - run: yarn
-    - run: yarn bundlesize
+    - run: yarn bundlewatch
       env:
-        BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
+        BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
