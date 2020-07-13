@@ -1,4 +1,4 @@
-name: Test
+name: Bundlesize
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  lint:
+  bundlesize:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,6 +15,7 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: 12
+    - run: yarn
     - run: yarn bundlesize
       env:
         BUNDLESIZE_GITHUB_TOKEN: ${{ secrets.BUNDLESIZE_GITHUB_TOKEN }}
