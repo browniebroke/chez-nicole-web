@@ -65,7 +65,7 @@
     "deploy": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
   }
 }
