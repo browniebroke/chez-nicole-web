@@ -2,19 +2,19 @@
 
 <p align="center">
   <a href="https://lgtm.com/projects/g/browniebroke/chez-nicole-web/alerts/">
-    <img src="https://img.shields.io/lgtm/alerts/g/browniebroke/chez-nicole-web.svg?logo=lgtm&logoWidth=18" alt="Total alerts">
+    <img src="https://img.shields.io/lgtm/alerts/github/browniebroke/chez-nicole-web?logo=lgtm&logoColor=white&style=flat-square" alt="Total alerts">
   </a>
   <a href="https://david-dm.org/browniebroke/chez-nicole-web">
-    <img src="https://david-dm.org/browniebroke/chez-nicole-web/status.svg" alt="dependencies Status"/>
+    <img src="https://img.shields.io/david/browniebroke/chez-nicole-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
   </a>
-  <a href="https://travis-ci.com/browniebroke/chez-nicole-web">
-    <img src="https://travis-ci.com/browniebroke/chez-nicole-web.svg?branch=master" alt="Build status"/>
+  <a href="https://github.com/browniebroke/chez-nicole-web/actions?query=workflow%3ALint">
+    <img alt="Linting Workflow status" src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/Lint/master?label=Lint&logo=github&logoColor=white&style=flat-square">
   </a>
   <a href="https://github.com/browniebroke/chez-nicole-web/actions">
-    <img src="https://github.com/browniebroke/chez-nicole-web/workflows/Lighthouse/badge.svg" alt="Lighthouse"/>
+    <img src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/Lighthouse%20Production/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
   </a>
-  <a href="https://www.netlify.com">
-    <img src="https://img.shields.io/badge/deployed-netlify-00c7b7.svg" alt="Deployed on Netlify"/>
+  <a href="https://app.netlify.com/sites/chez-nicole/deploys">
+    <img src="https://img.shields.io/netlify/7c82bb03-2d9f-44d2-b526-b88616cbe41a?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
   </a>
 </p>
 

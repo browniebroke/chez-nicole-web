@@ -28,7 +28,7 @@
     "react-icons": "3.10.0"
   },
   "devDependencies": {
-    "bundlesize": "0.18.0",
+    "bundlewatch": "0.2.7",
     "eslint": "7.4.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-prettier": "3.1.4",
@@ -43,7 +43,7 @@
     "starter"
   ],
   "license": "MIT",
-  "bundlesize": [
+  "bundlewatch": [
     {
       "path": "./public/app-*.js",
       "maxSize": "40 kB"
@@ -60,12 +60,12 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "prebundlesize": "yarn run build",
-    "bundlesize": "bundlesize",
+    "prebundlewatch": "yarn run build",
+    "bundlewatch": "bundlewatch",
     "deploy": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.+(js|json|md)\"",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
+    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
   }
 }
