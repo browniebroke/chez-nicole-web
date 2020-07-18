@@ -8,6 +8,14 @@ import Container from '../components/container'
 import '@browniebroke/gatsby-image-gallery/dist/style.css'
 
 const GalleryPage = ({ data, path }) => {
+  const lightboxOptions = {
+    imageLoadErrorMessage: 'Impossible de charger cette image',
+    nextLabel: 'Image suivante',
+    prevLabel: 'Image précédente',
+    zoomInLabel: 'Zoomer',
+    zoomOutLabel: 'Dézoomer',
+    closeLabel: 'Fermer',
+  }
   const images = data.allFile.edges.map(({ node }) => node.childImageSharp)
 
   return (
@@ -22,7 +30,7 @@ const GalleryPage = ({ data, path }) => {
             <div className="col-md-12">
               <h1>Photos</h1>
               <p>Pour donner un petit aperçu du menu et des lieux</p>
-              <Gallery images={images} />
+              <Gallery images={images} lightboxOptions={lightboxOptions} />
             </div>
           </div>
         </div>
