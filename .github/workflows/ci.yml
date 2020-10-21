@@ -1,12 +1,37 @@
-name: Lighthouse
+name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [ main ]
   pull_request:
-    branches: [master]
 
 jobs:
+  lint:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        linter:
+        - eslint
+        - prettier
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Setup node based on .nvmrc
+    # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
+    - name: Read .nvmrc
+      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+      id: nvm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+    - run: yarn
+    - run: |
+        yarn lint:${{ matrix.linter }}
+
   lighthouse:
     runs-on: ubuntu-latest
     steps:
@@ -36,3 +61,23 @@ jobs:
             \"description\": \"Lighthouse report\",
             \"context\": \"lighthouse-report\"
           }"
+
+  bundlewatch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    # Setup node based on .nvmrc
+    # https://github.com/actions/setup-node/issues/32#issuecomment-539794249
+    - name: Read .nvmrc
+      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
+      id: nvm
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '${{ steps.nvm.outputs.NVMRC }}'
+
+    - run: yarn
+    - run: yarn bundlewatch
+      env:
+        BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}

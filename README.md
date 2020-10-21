@@ -7,11 +7,8 @@
   <a href="https://david-dm.org/browniebroke/chez-nicole-web">
     <img src="https://img.shields.io/david/browniebroke/chez-nicole-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
   </a>
-  <a href="https://github.com/browniebroke/chez-nicole-web/actions?query=workflow%3ALint">
-    <img alt="Linting Workflow status" src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/Lint/master?label=Lint&logo=github&logoColor=white&style=flat-square">
-  </a>
-  <a href="https://github.com/browniebroke/chez-nicole-web/actions?query=workflow%3ALighthouse">
-    <img src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/Lighthouse/master?label=Lighthouse&logo=github&logoColor=white&style=flat-square" alt="Lighthouse"/>
+  <a href="https://github.com/browniebroke/chez-nicole-web/actions?query=workflow%3ACI">
+    <img alt="CI status" src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/CI/main?label=CI&logo=github&logoColor=white&style=flat-square">
   </a>
   <a href="https://app.netlify.com/sites/chez-nicole/deploys">
     <img src="https://img.shields.io/netlify/7c82bb03-2d9f-44d2-b526-b88616cbe41a?label=Netlify&logo=netlify&logoColor=white&style=flat-square" alt="Deployed on Netlify"/>
