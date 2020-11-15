@@ -4,9 +4,6 @@
   <a href="https://lgtm.com/projects/g/browniebroke/chez-nicole-web/alerts/">
     <img src="https://img.shields.io/lgtm/alerts/github/browniebroke/chez-nicole-web?logo=lgtm&logoColor=white&style=flat-square" alt="Total alerts">
   </a>
-  <a href="https://david-dm.org/browniebroke/chez-nicole-web">
-    <img src="https://img.shields.io/david/browniebroke/chez-nicole-web?logo=npm&logoColor=white&style=flat-square" alt="dependencies Status"/>
-  </a>
   <a href="https://github.com/browniebroke/chez-nicole-web/actions?query=workflow%3ACI">
     <img alt="CI status" src="https://img.shields.io/github/workflow/status/browniebroke/chez-nicole-web/CI/main?label=CI&logo=github&logoColor=white&style=flat-square">
   </a>
