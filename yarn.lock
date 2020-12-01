@@ -1021,11 +1021,13 @@
     react-image-lightbox "^5.1.1"
     styled-components "^5.0.0"
 
-"@browniebroke/react-ui-components@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@browniebroke/react-ui-components/-/react-ui-components-1.0.3.tgz#307006efc7d3838fc2f6774cc277c5b1d6ef0e53"
-  integrity sha512-2/NppLdc1MsxL1fPyuyghP1TGTgCgZKm7wnr+In5ySyNYfsp3sBxuh2rwLlJTqeQPultfI1Xl0NwFaLVbkJMkg==
+"@browniebroke/react-ui-components@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@browniebroke/react-ui-components/-/react-ui-components-1.6.0.tgz#3d0d6b22a5a923943422561f9a591fa72bbc815b"
+  integrity sha512-XuLGA/GY477VFDyk285ATlW51teEnpelJQXtEm6bfjLJZmevI6sCr82uDGbMYQC6p9NfExcz4FE1/72rl4FJng==
   dependencies:
+    color "^3.1.3"
+    gray-percentage "^2.0.0"
     styled-components "^5.0.0"
 
 "@emotion/is-prop-valid@^0.8.8":
@@ -4000,7 +4002,7 @@ color-string@^1.5.4:
     color-name "^1.0.0"
     simple-swizzle "^0.2.2"
 
-color@^3.0.0, color@^3.1.2:
+color@^3.0.0, color@^3.1.2, color@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/color/-/color-3.1.3.tgz#ca67fb4e7b97d611dcde39eceed422067d91596e"
   integrity sha512-xgXAcTHa2HeFCGLE9Xs/R82hujGtu9Jd9x4NW3T34+OMs7VoPsjwzRczKHvTAHeJwWFwX5j15+MgAppE8ztObQ==
@@ -7522,6 +7524,11 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gray-percentage@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/gray-percentage/-/gray-percentage-2.0.0.tgz#b72a274d1b1379104a0050b63b207dc53fe56f99"
+  integrity sha1-tyonTRsTeRBKAFC2OyB9xT/lb5k=
 
 gud@^1.0.0:
   version "1.0.0"
