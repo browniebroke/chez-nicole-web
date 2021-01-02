@@ -31,7 +31,7 @@
   "devDependencies": {
     "bundlewatch": "0.3.1",
     "eslint": "7.16.0",
-    "eslint-config-prettier": "7.0.0",
+    "eslint-config-prettier": "7.1.0",
     "eslint-plugin-prettier": "3.3.0",
     "eslint-plugin-react": "7.22.0",
     "node-sass": "4.14.1",
