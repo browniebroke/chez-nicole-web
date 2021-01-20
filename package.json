@@ -6,7 +6,7 @@
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "4.0.2",
     "@browniebroke/react-ui-components": "1.6.0",
-    "bootstrap": "4.5.3",
+    "bootstrap": "4.6.0",
     "gatsby": "2.30.2",
     "gatsby-image": "2.9.0",
     "gatsby-link": "2.9.0",
