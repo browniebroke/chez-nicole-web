@@ -5,8 +5,6 @@ import Gallery from '@browniebroke/gatsby-image-gallery'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-import '@browniebroke/gatsby-image-gallery/dist/style.css'
-
 const GalleryPage = ({ data, path }) => {
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',
