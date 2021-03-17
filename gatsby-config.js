@@ -5,28 +5,17 @@ module.exports = {
       "Chez Nicole est un restaurant familial situé à Sauclières, dans l'Aveyron",
     siteUrl: 'http://www.chez-nicole.fr',
     author: 'browniebroke',
-    image: '/img/content/bar-original.jpg',
   },
   pathPrefix: '/',
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/gallery/`,
-        name: 'gallery',
+        path: `${__dirname}/src/assets`,
+        name: 'assets',
       },
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/static/`,
-        name: 'static',
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {},
-    },
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -38,13 +27,13 @@ module.exports = {
         background_color: '#fff',
         theme_color: '#b2d233',
         display: 'standalone',
-        icon: 'static/img/favicon.png',
+        icon: 'src/assets/logos/favicon.png',
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID,
+        trackingId: process.env.GA_TRACKING_ID || 'UA-0',
       },
     },
     {
@@ -60,6 +49,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,

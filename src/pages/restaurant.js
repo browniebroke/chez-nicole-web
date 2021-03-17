@@ -1,7 +1,7 @@
-import { graphql } from 'gatsby'
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+
 import Layout from '../components/layout'
-import Img from 'gatsby-image'
 import Container from '../components/container'
 
 const Restaurant = (props) => (
@@ -10,9 +10,12 @@ const Restaurant = (props) => (
     title="Restaurant"
     description="Quelques details sur notre restaurant, heure d'ouvertures et menu"
   >
-    <Img
-      fluid={props.data.file.childImageSharp.fluid}
+    <StaticImage
+      src="../assets/restaurant-artistique.jpg"
       alt="La salle de restaurant"
+      placeholder="blurred"
+      width={1700}
+      height={800}
       className="img-fluid"
     />
     <Container isFluid={true}>
@@ -42,20 +45,3 @@ const Restaurant = (props) => (
 )
 
 export default Restaurant
-
-export const pageQuery = graphql`
-  query {
-    file(relativePath: { eq: "img/content/restaurant-artistique.jpg" }) {
-      childImageSharp {
-        fluid(
-          maxWidth: 1700
-          maxHeight: 800
-          cropFocus: SOUTH
-          srcSetBreakpoints: [576, 768, 992, 1200]
-        ) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
