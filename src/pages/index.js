@@ -1,12 +1,11 @@
-import { graphql } from 'gatsby'
 import React from 'react'
-import Img from 'gatsby-image'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const SiteIndex = (props) => (
-  <Layout path={props.path} title="Acceuil">
+const SiteIndex = ({ path }) => (
+  <Layout path={path} title="Acceuil">
     <Container isFluid={true}>
       <div className="my-4">
         <div className="row">
@@ -25,7 +24,12 @@ const SiteIndex = (props) => (
             </p>
           </div>
           <div className="col-md-12">
-            <Img fluid={props.data.file.childImageSharp.fluid} alt="Le Bar" />
+            <StaticImage
+              src="../assets/bar-original.jpg"
+              alt="Le bar"
+              placeholder="blurred"
+              width={1700}
+            />
           </div>
         </div>
       </div>
@@ -34,15 +38,3 @@ const SiteIndex = (props) => (
 )
 
 export default SiteIndex
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    file(relativePath: { eq: "img/content/bar-original.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1700, srcSetBreakpoints: [576, 768, 992, 1200]) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`

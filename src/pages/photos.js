@@ -41,20 +41,16 @@ export default GalleryPage
 
 export const pageQuery = graphql`
   query ImagesForGallery {
-    allFile(filter: { sourceInstanceName: { eq: "gallery" } }) {
+    allFile(filter: { relativeDirectory: { eq: "gallery" } }) {
       edges {
         node {
           childImageSharp {
-            full: fluid(
-              maxWidth: 1024
-              quality: 90
-              srcSetBreakpoints: [576, 768, 992, 1200]
-            ) {
-              ...GatsbyImageSharpFluid
-            }
-            thumb: fluid(maxWidth: 270, maxHeight: 270) {
-              ...GatsbyImageSharpFluid
-            }
+            full: gatsbyImageData(layout: FULL_WIDTH)
+            thumb: gatsbyImageData(
+              width: 270
+              height: 270
+              placeholder: BLURRED
+            )
           }
         }
       }
