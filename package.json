@@ -47,11 +47,11 @@
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
-      "maxSize": "40 kB"
+      "maxSize": "25 kB"
     },
     {
       "path": "./public/component---src-pages-!(photos)-*.js",
-      "maxSize": "1 kB"
+      "maxSize": "2 kB"
     },
     {
       "path": "./public/component---src-pages-photos-*.js",
