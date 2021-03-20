@@ -3,6 +3,13 @@
   "description": "Website for Chez Nicole",
   "version": "2.0.0",
   "author": "Bruno Alla <alla.brunoo@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatstrap",
+    "starter"
+  ],
+  "main": "n/a",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.0.0",
     "@browniebroke/react-ui-components": "1.7.1",
@@ -38,12 +45,57 @@
     "prettier": "2.2.1",
     "textlint": "11.8.2"
   },
-  "keywords": [
-    "gatsby",
-    "gatstrap",
-    "starter"
-  ],
-  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "prebundlewatch": "yarn run build",
+    "bundlewatch": "bundlewatch",
+    "deploy": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "format": "prettier --write .",
+    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:prettier": "prettier --check ."
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "semi": false,
+    "singleQuote": true
+  },
+  "eslintConfig": {
+    "extends": [
+      "prettier"
+    ],
+    "plugins": [
+      "react",
+      "prettier"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "trailingComma": "es5",
+          "singleQuote": true,
+          "semi": false,
+          "arrowParens": "always"
+        }
+      ]
+    }
+  },
+  "renovate": {
+    "extends": [
+      "github>browniebroke/renovate-configs:js-app"
+    ]
+  },
   "bundlewatch": [
     {
       "path": "./public/app-*.js",
@@ -57,16 +109,5 @@
       "path": "./public/component---src-pages-photos-*.js",
       "maxSize": "35 kB"
     }
-  ],
-  "main": "n/a",
-  "scripts": {
-    "build": "gatsby build",
-    "prebundlewatch": "yarn run build",
-    "bundlewatch": "bundlewatch",
-    "deploy": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.+(js|json|md)\"",
-    "lint:eslint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:prettier": "prettier --check \"**/*.+(js|jsx|json|css|scss)\""
-  }
+  ]
 }
