@@ -1,10 +1,15 @@
 import React from 'react'
+
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const Contact = (props) => (
+interface ContactProps {
+  path: string
+}
+
+const Contact: React.FC<ContactProps> = ({ path }) => (
   <Layout
-    path={props.path}
+    path={path}
     title="Contact"
     description="Comment nous contacter: téléphone, addresse, email."
   >

@@ -4,9 +4,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const Restaurant = (props) => (
+interface RestaurantProps {
+  path: string
+}
+
+const Restaurant: React.FC<RestaurantProps> = ({ path }) => (
   <Layout
-    path={props.path}
+    path={path}
     title="Restaurant"
     description="Quelques details sur notre restaurant, heure d'ouvertures et menu"
   >
