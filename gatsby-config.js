@@ -1,9 +1,15 @@
+const baseUrl =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:8000'
+    : process.env.REVIEW_ID
+    ? `https://deploy-preview-${process.env.REVIEW_ID}--chez-nicole.netlify.app`
+    : `http://www.chez-nicole.fr`
+
 module.exports = {
   siteMetadata: {
     title: 'Chez Nicole',
-    description:
-      "Chez Nicole est un restaurant familial situé à Sauclières, dans l'Aveyron",
-    siteUrl: 'http://www.chez-nicole.fr',
+    description: `Chez Nicole est un restaurant familial situé à Sauclières, dans l'Aveyron`,
+    siteUrl: baseUrl,
     author: 'browniebroke',
   },
   pathPrefix: '/',
@@ -46,6 +52,7 @@ module.exports = {
           ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
       },
     },
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

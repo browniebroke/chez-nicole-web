@@ -1,9 +1,10 @@
 import React from 'react'
 import { FaFacebook, FaGoogle, FaTripadvisor } from 'react-icons/fa'
+
 import Container from './container'
 import SocialLinkItem from './social-link-item'
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <div className="footer py-5 small">
     <Container>
       <hr

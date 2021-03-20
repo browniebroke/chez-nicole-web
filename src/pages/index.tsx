@@ -4,7 +4,11 @@ import { StaticImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const SiteIndex = ({ path }) => (
+interface SiteIndexProps {
+  path: string
+}
+
+const SiteIndex: React.FC<SiteIndexProps> = ({ path }) => (
   <Layout path={path} title="Acceuil">
     <Container isFluid={true}>
       <div className="my-4">

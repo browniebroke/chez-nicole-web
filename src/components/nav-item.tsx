@@ -1,8 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-const NavItem = (props) => {
-  const { currentPath, url, children } = props
+interface NavItemProps {
+  currentPath: string
+  url: string
+}
+
+const NavItem: React.FC<NavItemProps> = ({ currentPath, url, children }) => {
   return (
     <li className={`nav-item${currentPath === url ? ' active' : ''}`}>
       <Link to={url} className="nav-link">

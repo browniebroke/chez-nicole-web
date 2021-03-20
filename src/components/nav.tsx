@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'gatsby'
+
 import NaviItem from './nav-item'
 
 import siteLogo from '../assets/logos/logo.png'
 
-const Nav = (props) => {
-  const currentPath = props.currentPath
+interface NavProps {
+  currentPath: string
+}
+
+const Nav: React.FC<NavProps> = ({ currentPath }) => {
   return (
-    <React.Fragment>
+    <>
       <div className="row mx-1">
         <Link to="/" className="navbar-brand">
           <img src={siteLogo} alt="Logo du restaurant" className="img-fluid" />
@@ -34,7 +38,7 @@ const Nav = (props) => {
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
         </nav>
       </div>
-    </React.Fragment>
+    </>
   )
 }
 

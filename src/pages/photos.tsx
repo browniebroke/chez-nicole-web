@@ -1,11 +1,30 @@
 import { graphql } from 'gatsby'
 import React from 'react'
+import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 
 import Layout from '../components/layout'
 import Container from '../components/container'
 
-const GalleryPage = ({ data, path }) => {
+interface ImageInGallery {
+  node: {
+    childImageSharp: {
+      full: IGatsbyImageData
+      thumb: IGatsbyImageData
+    }
+  }
+}
+
+interface GalleryPageProps {
+  path: string
+  data: {
+    allFile: {
+      edges: ImageInGallery[]
+    }
+  }
+}
+
+const GalleryPage: React.FC<GalleryPageProps> = ({ data, path }) => {
   const lightboxOptions = {
     imageLoadErrorMessage: 'Impossible de charger cette image',
     nextLabel: 'Image suivante',
@@ -19,7 +38,7 @@ const GalleryPage = ({ data, path }) => {
   return (
     <Layout
       path={path}
-      title="Gallerie"
+      title="Photos"
       description="Pour donner un petit aperçu du menu et des lieux"
     >
       <Container isFluid={true}>
