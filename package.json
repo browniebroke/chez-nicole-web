@@ -49,7 +49,7 @@
     "eslint-plugin-react": "7.23.1",
     "node-sass": "5.0.0",
     "prettier": "2.2.1",
-    "textlint": "11.8.2"
+    "textlint": "11.9.0"
   },
   "scripts": {
     "build": "gatsby build",
