@@ -28,7 +28,6 @@ module.exports = {
         name: 'Chez Nicole',
         short_name: 'Chez Nicole',
         description: 'Site du restaurant Chez Nicole',
-        homepage_url: 'https://www.chez-nicole.fr',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#b2d233',
