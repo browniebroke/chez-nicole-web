@@ -35,24 +35,49 @@ jobs:
   lighthouse:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 360 # 6 mins in seconds
-        if: ${{ github.event_name == 'push' }}
-      - name: Wait for deploy
+      - uses: actions/checkout@v2
+
+      # PR: check deploy preview
+      - name: Wait for the Netlify Preview
         if: ${{ github.event_name == 'pull_request' }}
-        uses: maddox/actions/wait-for-200@master
-        env:
-          URL: 'https://deploy-preview-${{ github.event.pull_request.number }}--chez-nicole.netlify.app'
-          SECONDS_BETWEEN_CHECKS: 20
-          MAX_TRIES: 30
-      - name: Lighthouse Audit
-        uses: jakejarvis/lighthouse-action@master
+        uses: jakepartusch/wait-for-netlify-action@v1
+        id: netlify
         with:
-          url: 'https://www.chez-nicole.fr'
-          netlify_site: 'chez-nicole.netlify.app'
-      - uses: browniebroke/deploy-lighthouse-report-action@main
+          site_name: 'chez-nicole'
+          max_timeout: 360
+      - name: Audit URLs using Lighthouse
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: treosh/lighthouse-ci-action@v7
         with:
-          vercel_token: ${{ secrets.VERCEL_TOKEN }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify.outputs.url }}/restaurant/
+            ${{ steps.netlify.outputs.url }}/contact/
+            ${{ steps.netlify.outputs.url }}/photos/
+          # budgetPath: ./budget.json
+          # configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
+
+      # Push: check production
+      - name: Wait for prod deploy
+        if: ${{ github.event_name == 'push' }}
+        run: sleep 360 # 6 mins in seconds
+      - name: Audit URLs using Lighthouse
+        if: ${{ github.event_name == 'push' }}
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: |
+            https://chez-nicole.fr
+            https://chez-nicole.fr/restaurant/
+            https://chez-nicole.fr/contact/
+            https://chez-nicole.fr/photos/
+          # budgetPath: ./budget.json
+          # configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
 
   bundlewatch:
     runs-on: ubuntu-latest
