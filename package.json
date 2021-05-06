@@ -12,7 +12,7 @@
   "main": "n/a",
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "6.2.0",
-    "@browniebroke/react-ui-components": "1.7.2",
+    "@browniebroke/react-ui-components": "1.7.3",
     "bootstrap": "4.6.0",
     "gatsby": "3.4.1",
     "gatsby-link": "3.4.0",
