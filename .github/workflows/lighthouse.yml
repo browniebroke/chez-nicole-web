@@ -1,0 +1,25 @@
+name: Lighthouse
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '36 9 * * *'
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v7
+        with:
+          urls: |
+            https://chez-nicole.fr
+            https://chez-nicole.fr/restaurant/
+            https://chez-nicole.fr/contact/
+            https://chez-nicole.fr/photos/
+          # budgetPath: ./budget.json
+          # configPath: ./lighthouserc.json
+          uploadArtifacts: true
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}

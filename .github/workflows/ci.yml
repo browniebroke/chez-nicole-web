@@ -32,53 +32,6 @@ jobs:
       - run: |
           yarn lint:${{ matrix.linter }}
 
-  lighthouse:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      # PR: check deploy preview
-      - name: Wait for the Netlify Preview
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: jakepartusch/wait-for-netlify-action@v1
-        id: netlify
-        with:
-          site_name: 'chez-nicole'
-          max_timeout: 360
-      - name: Audit URLs using Lighthouse
-        if: ${{ github.event_name == 'pull_request' }}
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          urls: |
-            ${{ steps.netlify.outputs.url }}
-            ${{ steps.netlify.outputs.url }}/restaurant/
-            ${{ steps.netlify.outputs.url }}/contact/
-            ${{ steps.netlify.outputs.url }}/photos/
-          # budgetPath: ./budget.json
-          # configPath: ./lighthouserc.json
-          uploadArtifacts: true
-          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
-          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
-
-      # Push: check production
-      - name: Wait for prod deploy
-        if: ${{ github.event_name == 'push' }}
-        run: sleep 360 # 6 mins in seconds
-      - name: Audit URLs using Lighthouse
-        if: ${{ github.event_name == 'push' }}
-        uses: treosh/lighthouse-ci-action@v7
-        with:
-          urls: |
-            https://chez-nicole.fr
-            https://chez-nicole.fr/restaurant/
-            https://chez-nicole.fr/contact/
-            https://chez-nicole.fr/photos/
-          # budgetPath: ./budget.json
-          # configPath: ./lighthouserc.json
-          uploadArtifacts: true
-          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
-          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
-
   bundlewatch:
     runs-on: ubuntu-latest
 
