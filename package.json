@@ -101,6 +101,14 @@
   "renovate": {
     "extends": [
       "github>browniebroke/renovate-configs:js-app"
+    ],
+    "packageRules": [
+      {
+        "packageNames": [
+          "bootstrap"
+        ],
+        "allowedVersions": "<5"
+      }
     ]
   },
   "bundlewatch": [
