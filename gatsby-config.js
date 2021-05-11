@@ -57,7 +57,25 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: '/',
+        resolveSiteUrl: () => baseUrl,
+        serialize: (page, tools) => {
+          let priority = 0.5
+          const pagePath = tools.resolvePagePath(page)
+          if (pagePath === '/') {
+            priority = 1
+          }
+          return {
+            url: `${baseUrl}${pagePath}`,
+            changefreq: `monthly`,
+            priority: priority,
+          }
+        },
+      },
+    },
     `gatsby-plugin-robots-txt`,
     {
       // Needs to be last
