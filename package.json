@@ -14,7 +14,7 @@
     "@browniebroke/gatsby-image-gallery": "6.2.2",
     "@browniebroke/react-ui-components": "1.8.0",
     "bootstrap": "4.6.0",
-    "gatsby": "3.10.1",
+    "gatsby": "3.10.2",
     "gatsby-link": "3.10.0",
     "gatsby-plugin-google-analytics": "3.10.0",
     "gatsby-plugin-image": "1.10.1",
@@ -37,10 +37,10 @@
     "typescript": "4.3.5"
   },
   "devDependencies": {
-    "@types/react": "17.0.14",
+    "@types/react": "17.0.15",
     "@types/react-dom": "17.0.9",
     "@types/react-helmet": "6.1.2",
-    "@typescript-eslint/parser": "4.28.4",
+    "@typescript-eslint/parser": "4.28.5",
     "bundlewatch": "0.3.2",
     "eslint": "7.31.0",
     "eslint-config-prettier": "8.3.0",
