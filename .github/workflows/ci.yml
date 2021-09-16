@@ -28,9 +28,9 @@ jobs:
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-      - run: yarn
+      - run: npm i
       - run: |
-          yarn lint:${{ matrix.linter }}
+          npm run lint:${{ matrix.linter }}
 
   bundlewatch:
     runs-on: ubuntu-latest
@@ -47,7 +47,8 @@ jobs:
         with:
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
 
-      - run: yarn
-      - run: yarn bundlewatch
+      - run: npm i
+      - run: npm run build
+      - run: npm run bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
