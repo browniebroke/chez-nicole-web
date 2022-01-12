@@ -38,7 +38,7 @@ const Restaurant: React.FC<RestaurantProps> = ({ path }) => (
             </p>
             <h3 className="text-center mt-5">Menu</h3>
             <p>
-              Nous offrons un menu unique à 13,50€ avec entrée + plat du jour +
+              Nous offrons un menu unique à 15,50€ avec entrée + plat du jour +
               dessert ou fromage avec 1/4l de vin.
             </p>
           </div>
