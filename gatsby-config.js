@@ -92,5 +92,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-robots-txt`,
+    {
+      // Needs to be last
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          '/*': [
+            // Opt-out of Google's FLoC
+            'Permissions-Policy: interest-cohort=()',
+          ],
+        },
+      },
+    },
   ],
 }
