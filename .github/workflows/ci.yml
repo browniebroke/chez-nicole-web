@@ -16,3 +16,27 @@ jobs:
     uses: browniebroke/github-actions/.github/workflows/bundlewatch.yml@v1
     secrets:
       bundlewatch_token: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
+          node-version-file: '.nvmrc'
+      - run: npm i
+      - run: npm run build
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: 'public'
+          production-deploy: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          netlify-config-path: ./netlify.toml
+          alias: deploy-preview-${{ github.event.number }}
+          enable-commit-comment: false
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: 7c82bb03-2d9f-44d2-b526-b88616cbe41a
