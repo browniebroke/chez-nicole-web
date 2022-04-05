@@ -2,7 +2,3 @@
   base    = ""
   publish = "public"
   command = "npm run build"
-  environment = { GATSBY_CPU_COUNT = "1" }
-
-[context.production]
-  environment = { GA_TRACKING_ID = "G-M7V69MM8ME" }
