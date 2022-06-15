@@ -6,7 +6,11 @@ interface NavItemProps {
   url: string
 }
 
-const NavItem: React.FC<NavItemProps> = ({ currentPath, url, children }) => {
+export const NavItem: React.FC<NavItemProps> = ({
+  currentPath,
+  url,
+  children,
+}) => {
   return (
     <li className={`nav-item${currentPath === url ? ' active' : ''}`}>
       <Link to={url} className="nav-link">
@@ -15,5 +19,3 @@ const NavItem: React.FC<NavItemProps> = ({ currentPath, url, children }) => {
     </li>
   )
 }
-
-export default NavItem

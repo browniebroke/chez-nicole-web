@@ -3,8 +3,8 @@ import React from 'react'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 import Gallery from '@browniebroke/gatsby-image-gallery'
 
-import Layout from '../components/layout'
-import Container from '../components/container'
+import { Layout } from '../components/layout'
+import { Container } from '../components/container'
 
 interface ImageInGallery {
   node: {

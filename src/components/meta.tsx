@@ -9,7 +9,7 @@ interface MetaProps {
   description?: string
 }
 
-const Meta: React.FC<MetaProps> = ({ title, path, description }) => {
+export const Meta: React.FC<MetaProps> = ({ title, path, description }) => {
   const { site, defaultImage } = useStaticQuery(
     graphql`
       query SiteMetaQuery {
@@ -79,4 +79,3 @@ const Meta: React.FC<MetaProps> = ({ title, path, description }) => {
     />
   )
 }
-export default Meta

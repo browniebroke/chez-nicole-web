@@ -5,7 +5,11 @@ interface ContainerProps {
   isMain?: boolean
 }
 
-const Container: React.FC<ContainerProps> = ({ isFluid, isMain, children }) => {
+export const Container: React.FC<ContainerProps> = ({
+  isFluid,
+  isMain,
+  children,
+}) => {
   return (
     <div
       className={`container${isFluid ? '-fluid' : ''} ${
@@ -16,5 +20,3 @@ const Container: React.FC<ContainerProps> = ({ isFluid, isMain, children }) => {
     </div>
   )
 }
-
-export default Container

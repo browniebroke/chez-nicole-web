@@ -7,7 +7,7 @@ interface SocialLinkItemProps {
   logo: IconType
 }
 
-const SocialLinkItem: React.FC<SocialLinkItemProps> = ({
+export const SocialLinkItem: React.FC<SocialLinkItemProps> = ({
   url,
   label,
   logo,
@@ -25,5 +25,3 @@ const SocialLinkItem: React.FC<SocialLinkItemProps> = ({
     </li>
   )
 }
-
-export default SocialLinkItem

@@ -10,10 +10,6 @@
     "starter"
   ],
   "main": "n/a",
-  "engines": {
-    "node": "~16",
-    "npm": "~8"
-  },
   "dependencies": {
     "@browniebroke/gatsby-image-gallery": "7.0.6",
     "@browniebroke/react-ui-components": "1.8.3",
