@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Nav from './nav'
-import Footer from './footer'
-import Container from './container'
-import Meta from './meta'
+import { Nav } from './nav'
+import { Footer } from './footer'
+import { Container } from './container'
+import { Meta } from './meta'
 
 import '../scss/gatstrap.scss'
 
@@ -13,7 +13,7 @@ interface LayoutProps {
   description?: string
 }
 
-const Layout: React.FC<LayoutProps> = ({
+export const Layout: React.FC<LayoutProps> = ({
   children,
   title,
   path,
@@ -30,5 +30,3 @@ const Layout: React.FC<LayoutProps> = ({
     </React.Fragment>
   )
 }
-
-export default Layout

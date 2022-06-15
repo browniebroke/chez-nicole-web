@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import NaviItem from './nav-item'
+import { NavItem } from './nav-item'
 
 import siteLogo from '../assets/logos/logo.png'
 
@@ -9,7 +9,7 @@ interface NavProps {
   currentPath: string
 }
 
-const Nav: React.FC<NavProps> = ({ currentPath }) => {
+export const Nav: React.FC<NavProps> = ({ currentPath }) => {
   return (
     <>
       <div className="row mx-1">
@@ -21,18 +21,18 @@ const Nav: React.FC<NavProps> = ({ currentPath }) => {
         <nav className="navbar navbar-expand navbar-dark flex-column flex-md-row bg-primary">
           <div className="navbar-nav-scroll">
             <ul className="navbar-nav bd-navbar-nav flex-row">
-              <NaviItem url="/" currentPath={currentPath}>
+              <NavItem url="/" currentPath={currentPath}>
                 Accueil
-              </NaviItem>
-              <NaviItem url="/restaurant/" currentPath={currentPath}>
+              </NavItem>
+              <NavItem url="/restaurant/" currentPath={currentPath}>
                 Restaurant
-              </NaviItem>
-              <NaviItem url="/contact/" currentPath={currentPath}>
+              </NavItem>
+              <NavItem url="/contact/" currentPath={currentPath}>
                 Contact
-              </NaviItem>
-              <NaviItem url="/photos/" currentPath={currentPath}>
+              </NavItem>
+              <NavItem url="/photos/" currentPath={currentPath}>
                 Photos
-              </NaviItem>
+              </NavItem>
             </ul>
           </div>
           <div className="navbar-nav flex-row ml-md-auto d-none d-md-flex" />
@@ -41,5 +41,3 @@ const Nav: React.FC<NavProps> = ({ currentPath }) => {
     </>
   )
 }
-
-export default Nav

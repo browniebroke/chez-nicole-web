@@ -1,10 +1,10 @@
 import React from 'react'
 import { FaFacebook, FaGoogle, FaTripadvisor } from 'react-icons/fa'
 
-import Container from './container'
-import SocialLinkItem from './social-link-item'
+import { Container } from './container'
+import { SocialLinkItem } from './social-link-item'
 
-const Footer: React.FC = () => (
+export const Footer: React.FC = () => (
   <div className="footer py-5 small">
     <Container>
       <hr
@@ -48,5 +48,3 @@ const Footer: React.FC = () => (
     </Container>
   </div>
 )
-
-export default Footer
