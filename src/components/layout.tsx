@@ -8,17 +8,13 @@ import { Meta } from './meta'
 import '../scss/gatstrap.scss'
 
 interface LayoutProps {
+  children?: React.ReactNode
   path: string
   title: string
   description?: string
 }
 
-export const Layout: React.FC<LayoutProps> = ({
-  children,
-  title,
-  path,
-  description,
-}) => {
+export const Layout = ({ children, title, path, description }: LayoutProps) => {
   return (
     <React.Fragment>
       <Meta title={title} path={path} description={description} />
