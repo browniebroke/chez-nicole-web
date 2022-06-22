@@ -1,15 +1,12 @@
 import React from 'react'
 
 interface ContainerProps {
+  children?: React.ReactNode
   isFluid?: boolean
   isMain?: boolean
 }
 
-export const Container: React.FC<ContainerProps> = ({
-  isFluid,
-  isMain,
-  children,
-}) => {
+export const Container = ({ children, isFluid, isMain }: ContainerProps) => {
   return (
     <div
       className={`container${isFluid ? '-fluid' : ''} ${
