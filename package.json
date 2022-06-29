@@ -14,7 +14,7 @@
     "@browniebroke/gatsby-image-gallery": "7.0.7",
     "@browniebroke/react-ui-components": "2.0.0",
     "bootstrap": "4.6.1",
-    "gatsby": "4.17.1",
+    "gatsby": "4.17.2",
     "gatsby-plugin-google-gtag": "4.17.0",
     "gatsby-plugin-image": "2.17.0",
     "gatsby-plugin-manifest": "4.17.0",
