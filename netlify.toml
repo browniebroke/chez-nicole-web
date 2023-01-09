@@ -2,3 +2,8 @@
   base    = ""
   publish = "public"
   command = "npm run build"
+
+[[redirects]]
+  from = "/"
+  to = "http://www.lescale-sauclieres.com"
+  status = 301
