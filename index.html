@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chez Nicole</title>
+    <script>
+        navigator.serviceWorker.getRegistrations().then( function(registrations) { for(let registration of registrations) { registration.unregister(); } });
+        window.location.href = 'http://www.lescale-sauclieres.com';
+    </script>
+  </head>
+  <body>
+    <!-- page content -->
+  </body>
+</html>
